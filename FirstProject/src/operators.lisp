@@ -1,4 +1,5 @@
 (defun main ()
+  "Main function of the program."
   (let ((a 2)
         (b 8)
         (c 3)
