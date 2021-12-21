@@ -10,4 +10,6 @@
     (format t "~a~&" (= a c))
     (format t "~a~&" (> a b))
     (format t "~a~&" (char= letter #\w))
-    (format t "Can I print? ~a~&" (if (and ink paper) "Yes" "No"))))
+    (format t "Can I print? ~a~&" (if (and ink paper)
+                                      "Yes"
+                                      "No"))))

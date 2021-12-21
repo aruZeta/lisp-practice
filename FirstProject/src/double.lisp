@@ -1,14 +1,14 @@
 (defun main ()
-  (let ((number (getNumber)))
+  (let ((number (get-number)))
     (format t
             "The double of ~a is: ~a~&"
             number
-            (aru/double number))))
+            (double-n number))))
 
-(defun getNumber ()
+(defun get-number ()
   (print "Enter a number: ")
   (read))
 
 ;; The double function already exists
-(defun aru/double (n)
+(defun double-n (n)
   (* n 2))

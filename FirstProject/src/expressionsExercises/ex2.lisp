@@ -1,15 +1,15 @@
 (defun main ()
-  (let ((number (getNumber)))
+  (let ((number (get-number)))
     (format t
             "~a is~a multiple of 7~&"
             number
-            (if (isMultipleOf7 number)
+            (if (multiple-of-7-p number)
                 ""
                 "n't"))))
 
-(defun getNumber ()
+(defun get-number ()
   (print "Enter a number: ")
   (read))
 
-(defun isMultipleOf7 (n)
+(defun multiple-of-7-p (n)
   (= (mod n 7) 0))

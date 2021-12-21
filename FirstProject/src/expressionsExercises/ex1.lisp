@@ -1,13 +1,13 @@
 (defun main ()
-  (let* ((age (askAge)))
+  (let ((age (get-age)))
     (format t
             "Age: ~a, of legal age: ~a~&"
             age
-            (if (isOfLegalAge age) "yes" "no"))))
+            (if (legal-age-p age) "yes" "no"))))
 
-(defun askAge ()
+(defun get-age ()
   (print "Enter your age: ")
   (read))
 
-(defun isOfLegalAge (age &key (legalAge 18))
-  (>= age legalAge))
+(defun legal-age-p (age &key (legal-age 18))
+  (>= age legal-age))
