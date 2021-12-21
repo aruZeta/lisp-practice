@@ -1,3 +1,6 @@
+;;;; Make a program that asks the user for the weight of something and shows
+;;;; how much it would weigh in the moon
+
 (defvar *earth-gravity* 9.8)
 (defvar *moon-gravity* 1.62)
 

@@ -1,3 +1,5 @@
+;;;; Make a program that asks the user a number and shows if it is multiple of 7
+
 (defun main ()
   "Main function of the progam."
   (let ((number (get-number)))

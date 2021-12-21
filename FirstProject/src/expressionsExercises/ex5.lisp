@@ -1,3 +1,6 @@
+;;;; Make a program that asks the user for an amount of seconds and shows the
+;;;; seconds and converts it to the format of hh:mm:ss
+
 (defun main ()
   "Main function of the program."
   (let ((seconds (get-seconds)))

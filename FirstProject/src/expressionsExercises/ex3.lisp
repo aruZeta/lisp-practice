@@ -1,3 +1,5 @@
+;;;; Make a program that asks the user a year and shows if it is leap year
+
 (defun main ()
   "Main function of the program."
   (let ((year (get-year)))

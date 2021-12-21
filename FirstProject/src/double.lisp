@@ -1,3 +1,5 @@
+;;;; Make a program which asks a number and shows its double
+
 (defun main ()
   "Main function of the progam."
   (let ((number (get-number)))

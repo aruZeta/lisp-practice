@@ -1,3 +1,5 @@
+;;;; Make a program that asks the user his age and shows if it is a legal age
+
 (defun main ()
   "Main function of the progam."
   (let ((age (get-age)))

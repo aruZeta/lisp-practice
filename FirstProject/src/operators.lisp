@@ -1,3 +1,5 @@
+;;;; Program to test some operators
+
 (defun main ()
   "Main function of the program."
   (let ((a 2)
