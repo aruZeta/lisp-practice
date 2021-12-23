@@ -3,13 +3,13 @@
 ;;;; how much each liter of water costs depending on the limits
 ;;;; Example: 15l = 10l of low price + 5l of medium price
 
-(defconstant +high-price+ 10)
-(defconstant +medium-price+ 4)
-(defconstant +low-price+ 1)
+(defvar +high-price+ 10)
+(defvar +medium-price+ 4)
+(defvar +low-price+ 1)
 
-(defconstant +high-limit+ 20)
-(defconstant +medium-limit+ 10)
-(defconstant +low-limit+ 0)
+(defvar +high-limit+ 20)
+(defvar +medium-limit+ 10)
+(defvar +low-limit+ 0)
 
 (defun main ()
   "Main function of the program."
