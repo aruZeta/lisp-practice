@@ -1,5 +1,5 @@
 ;;;; Make a program that asks the user a number of a day of the week and
-;;;; returns its name
+;;;; shows its name
 ;;;; Example: 3 = "Wednesday"
 
 (defvar +days-of-the-week+ '("Monday"
@@ -23,5 +23,5 @@
   (read))
 
 (defun name-of-nth-day (number)
-  "Return the name of the nth day of the week"
+  "Return the name of the nth day of the week."
   (nth (- number 1) +days-of-the-week+))
