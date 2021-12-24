@@ -1,7 +1,7 @@
 ;;;; Make a program that asks the user a character and shows if it is a vocal
 
-(defconstant vocals '(#\a #\e #\i #\o #\u
-                      #\A #\E #\I #\O #\U))
+(defconstant +vocals+ '(#\a #\e #\i #\o #\u
+                        #\A #\E #\I #\O #\U))
 
 (defun main ()
   "Main function of the program."
@@ -20,4 +20,4 @@
 
 (defun is-vocal-p (character)
   "Return T when the character passed is a vocal. Otherwise, return NIL."
-  (when (member character vocals) t))
+  (when (member character +vocals+) t))

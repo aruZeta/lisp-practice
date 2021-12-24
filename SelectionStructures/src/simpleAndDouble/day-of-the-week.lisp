@@ -2,7 +2,7 @@
 ;;;; shows its name
 ;;;; Example: 3 = "Wednesday"
 
-(defvar +days-of-the-week+ '("Monday"
+(defvar *days-of-the-week* '("Monday"
                              "Tuesday"
                              "Wednesday"
                              "Thursday"
@@ -24,4 +24,4 @@
 
 (defun name-of-nth-day (number)
   "Return the name of the nth day of the week."
-  (nth (- number 1) +days-of-the-week+))
+  (nth (- number 1) *days-of-the-week*))
