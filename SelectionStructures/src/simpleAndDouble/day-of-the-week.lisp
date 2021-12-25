@@ -2,13 +2,15 @@
 ;;;; shows its name
 ;;;; Example: 3 = "Wednesday"
 
-(defvar *days-of-the-week* '("Monday"
-                             "Tuesday"
-                             "Wednesday"
-                             "Thursday"
-                             "Friday"
-                             "Saturday"
-                             "Sunday"))
+(defvar *days-of-the-week*
+  '("Monday"
+    "Tuesday"
+    "Wednesday"
+    "Thursday"
+    "Friday"
+    "Saturday"
+    "Sunday")
+  "LIST of STRING specifying the name of a day of the week.")
 
 (defun main ()
   "Main function of the program."

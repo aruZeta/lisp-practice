@@ -1,7 +1,8 @@
 ;;;; Make a program that asks the user a character and shows if it is a vocal
 
 (defconstant +vocals+ '(#\a #\e #\i #\o #\u
-                        #\A #\E #\I #\O #\U))
+                        #\A #\E #\I #\O #\U)
+  "LIST of CHAR specifying all the vocals.")
 
 (defun main ()
   "Main function of the program."

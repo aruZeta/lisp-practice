@@ -3,13 +3,21 @@
 ;;;; how much each liter of water costs depending on the limits
 ;;;; Example: 15l = 10l of low price + 5l of medium price
 
-(defvar *high-price* 10)
-(defvar *medium-price* 4)
-(defvar *low-price* 1)
+(defvar *high-price* 10
+  "INT specifying the price of the liters above the `*high-limit*'.")
+(defvar *medium-price* 4
+  "INT specifying the price of the liters between the `*medium-limit*' and
+`*high-limit*'.")
+(defvar *low-price* 1
+  "INT specifying the price of the liters between the `*low-limit*' and
+`*medium-limit*'.")
 
-(defvar *high-limit* 20)
-(defvar *medium-limit* 10)
-(defvar *low-limit* 0)
+(defvar *high-limit* 20
+  "INT specifying the high limit of liters of water consumption.")
+(defvar *medium-limit* 10
+  "INT specifying the medium limit of liters of water consumption.")
+(defvar *low-limit* 0
+  "INT specifying the low limit of liters of water consumption.")
 
 (defun main ()
   "Main function of the program."

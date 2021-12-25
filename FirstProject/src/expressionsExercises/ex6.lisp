@@ -1,7 +1,8 @@
 ;;;; Make a program that asks the user an amount of money and shows it in bills
 ;;;; Example: $565 would be 1 $500 bill, 1 $50, 1 $10 and 1 $5
 
-(defvar *bills* '(500 200 100 50 20 10 5))
+(defvar *bills* '(500 200 100 50 20 10 5)
+  "LIST of INT specifying the value of the available bills.")
 
 (defun main ()
   "Main function of the program."

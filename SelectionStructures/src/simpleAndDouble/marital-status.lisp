@@ -1,11 +1,18 @@
 ;;;; Make a program that asks the user the character representing his marital
 ;;;; status and shows the complete name
 
-(defvar *marital-status-list* '(((#\n #\N) . "Never married")
-                                ((#\m #\M) . "Married")
-                                ((#\s #\S) . "Separated")
-                                ((#\d #\D) . "Divorced")
-                                ((#\w #\W) . "Widowed")))
+(defvar *marital-status-list*
+  '(((#\n #\N) . "Never married")
+    ((#\m #\M) . "Married")
+    ((#\s #\S) . "Separated")
+    ((#\d #\D) . "Divorced")
+    ((#\w #\W) . "Widowed"))
+  "LIST of ALIST with a STRING specifying a marital status to a CHARACTER LIST.
+ALIST such (ALIAS LIST . MARITAL STATUS). ALIAS LIST is a CHARACTER LIST
+representing an alias of MARITAL STATUS. MARITAL STATUS is a STRING with the
+full name of a marital status.
+
+Example: '(((#\n #\N) . \"Never Married\") ((#\d #\D) \"Divorced\"))")
 
 (defun main ()
   "Main function of the program."
