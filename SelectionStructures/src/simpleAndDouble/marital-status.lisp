@@ -25,8 +25,7 @@ Otherwise, return NIL."
   "Type for objects which must be a ALIST of CHARACTER LIST to STRING."
   `(satisfies char-list-to-string-alist-p))
 
-(declaim (type (char-list-to-string-alist)
-               *alias-to-marital-status-list*))
+(declaim (type (char-list-to-string-alist) *alias-to-marital-status-list*))
 
 (defvar *alias-to-marital-status-alist*
   '(((#\n #\N) . "Never married")
