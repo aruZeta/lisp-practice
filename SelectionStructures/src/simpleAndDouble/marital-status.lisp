@@ -54,6 +54,7 @@ ALIAS is a CHARACTER representing an alias of MARITAL STATUS in
   (print "Enter the character representing your marital status (alias): ")
   (read-char))
 
+(declaim (ftype (function (character) string) marital-status-from-alias))
 
 (defun marital-status-from-alias (alias)
   "Return MARITAL STATUS bound to ALIAS in `*alias-to-marital-status-alist*'.
