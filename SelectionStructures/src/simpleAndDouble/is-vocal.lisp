@@ -14,6 +14,8 @@
                 ""
                 "n't"))))
 
+(declaim (ftype (function () character) get-character))
+
 (defun get-character ()
   "Ask the user to enter a character and return its value."
   (print "Enter a character: ")

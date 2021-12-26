@@ -9,6 +9,8 @@
   (let ((money (get-money)))
     (print-bills money)))
 
+(declaim (ftype (function () integer) get-money))
+
 (defun get-money ()
   "Ask the user to enter money and return its value."
   (print "Enter the money you want to convert: ")

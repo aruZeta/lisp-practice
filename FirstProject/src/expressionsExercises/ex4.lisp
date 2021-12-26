@@ -13,6 +13,8 @@
             "In the moon you would weigh: ~a~&"
             (weight-in-moon weight))))
 
+(declaim (ftype (function () (or float integer)) get-weight))
+
 (defun get-weight ()
   "Ask the user to enter a weight and return its value."
   (print "Enter your weight: ")

@@ -8,6 +8,8 @@
             age
             (if (legal-age-p age) "yes" "no"))))
 
+(declaim (ftype (function () integer) get-age))
+
 (defun get-age ()
   "Ask for the age of the user and return its value."
   (print "Enter your age: ")

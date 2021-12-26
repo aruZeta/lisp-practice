@@ -10,6 +10,8 @@
             (seconds-to-minutes seconds t)
             (remainder-seconds seconds))))
 
+(declaim (ftype (function () integer) get-seconds))
+
 (defun get-seconds ()
   "Ask the user to enter seconds and return its value."
   (print "Enter the seconds you want to convert: ")

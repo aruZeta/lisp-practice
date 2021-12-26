@@ -10,6 +10,8 @@
                 ""
                 "n't"))))
 
+(declaim (ftype (function () integer) get-number))
+
 (defun get-number ()
   "Ask the user to enter a number and return its value."
   (print "Enter a number: ")

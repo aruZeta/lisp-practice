@@ -47,6 +47,8 @@ Example: '(((#\n #\N) . \"Never Married\") ((#\d #\D) \"Divorced\"))")
             "~a~&"
             (marital-status-from-alias alias))))
 
+(declaim (ftype (function () character) get-marital-status-alias))
+
 (defun get-marital-status-alias ()
   "Ask the user to enter ALIAS and return its value.
 ALIAS is a CHARACTER representing an alias of MARITAL STATUS in

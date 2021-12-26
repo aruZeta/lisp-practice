@@ -10,6 +10,8 @@
                 ""
                 "n't"))))
 
+(declaim (ftype (function () integer) get-year))
+
 (defun get-year ()
   "Ask the user to enter a year and return its value."
   (print "Enter a year: ")

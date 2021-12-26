@@ -26,6 +26,8 @@
             "You'll have to pay $~a~&"
             (calc-water-bill liters))))
 
+(declaim (ftype (function () integer) get-liters))
+
 (defun get-liters ()
   "Ask the user to enter an amount of liters and return its value."
   (print "Enter how much liters you've used this month: ")
