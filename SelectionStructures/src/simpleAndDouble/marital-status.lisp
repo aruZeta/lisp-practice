@@ -35,9 +35,7 @@ Otherwise, return NIL."
     ((#\w #\W) . "Widowed"))
   "ALIST of ALIAS LIST to MARITAL STATUS.
 ALIAS LIST is a CHARACTER LIST representing an alias of MARITAL STATUS.
-MARITAL STATUS is a STRING with the full name of a marital status.
-
-Example: '(((#\n #\N) . \"Never Married\") ((#\d #\D) \"Divorced\"))")
+MARITAL STATUS is a STRING with the full name of a marital status.")
 
 (defun main ()
   "Main function of the program."
