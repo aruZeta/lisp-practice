@@ -8,7 +8,7 @@ Otherwise, return NIL."
     (when (listp object)
       (every #'char-list-to-string-cons-p object)))
 
-  (defun character-list-p (object)
+  (defun char-list-p (object)
     "Return T if OBJECT is a LIST containing CHARACTER.
 Otherwise, return NIL."
     (when (listp object)
@@ -18,7 +18,7 @@ Otherwise, return NIL."
     "Return T if OBJECT is a CONS of CHARACTER LIST to STRING.
 Otherwise, return NIL."
     (when (consp object)
-      (and (character-list-p (car object))
+      (and (char-list-p (car object))
            (stringp (cdr object))))))
 
 (deftype char-list-to-string-alist ()
