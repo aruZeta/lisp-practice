@@ -1,8 +1,21 @@
 ;;;; Make a program that asks the user a character and shows if it is a vocal
 
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (defun char-list-p (object)
+    "Return T if OBJECT is a LIST containing CHARACTER.
+Otherwise, return NIL."
+    (when (listp object)
+      (every #'characterp object))))
+
+(deftype char-list ()
+  "Type for objects which must be a CHARACTER LIST."
+  `(satisfies char-list-p))
+
+(declaim (type (char-list) +vocals+))
+
 (defconstant +vocals+ '(#\a #\e #\i #\o #\u
                         #\A #\E #\I #\O #\U)
-  "LIST of CHAR specifying all the vocals.")
+  "CHARACTER LIST specifying all the vocals.")
 
 (defun main ()
   "Main function of the program."
@@ -10,17 +23,20 @@
     (format t
             "~a is~a a vocal"
             character
-            (if (is-vocal-p character)
+            (if (vocalp character)
                 ""
                 "n't"))))
 
 (declaim (ftype (function () character) get-character))
 
 (defun get-character ()
-  "Ask the user to enter a character and return its value."
+  "Ask the user to enter CHARACTER and return its value."
   (print "Enter a character: ")
   (read-char))
 
-(defun is-vocal-p (character)
-  "Return T when the character passed is a vocal. Otherwise, return NIL."
-  (when (member character +vocals+) t))
+(declaim (ftype (function (character) boolean) vocalp))
+
+(defun vocalp (char)
+  "Return T when CHARACTER appears in `+vocals+'.
+Otherwise, return NIL."
+  (when (member char +vocals+) t))
