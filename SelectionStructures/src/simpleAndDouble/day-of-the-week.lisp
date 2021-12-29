@@ -23,8 +23,8 @@ Otherwise, return NIL."
     "Friday"
     "Saturday"
     "Sunday")
-  "DAY-OF-THE-WEEK LIST.
-DAY-OF-THE-WEEK is a STRING specifying the name of a day of the week.")
+  "DAY-OF-THE-WEEK LIST specifying the names of the days of the week.
+DAY-OF-THE-WEEK is a STRING.")
 
 (defun main ()
   "Main function of the program."
