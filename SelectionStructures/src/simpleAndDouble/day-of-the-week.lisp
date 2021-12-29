@@ -15,7 +15,7 @@ Otherwise, return NIL."
 
 (declaim (type (string-list) *days-of-the-week*))
 
-(defconstant *days-of-the-week*
+(defconstant +days-of-the-week+
   '("Monday"
     "Tuesday"
     "Wednesday"
