@@ -1,5 +1,10 @@
 ;;;; Program to test some operators
 
+(uiop:define-package :lisp-practice/first-project/src/operators
+  (:use :cl)
+  (:export main))
+(in-package :lisp-practice/first-project/src/operators)
+
 (defun main ()
   "Main function of the program."
   (let ((a 2)
