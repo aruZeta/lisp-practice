@@ -1,0 +1,6 @@
+* How to try the different exercises
+
+Open an sbcl instance and, having quicklisp and adding the project
+under the [[https://common-lisp.net/project/asdf/asdf/Configuring-ASDF-to-find-your-systems.html][common lisp systems dir]], ~(ql:quickload "lisp-practice")~,
+now if you want to run the program "foo/bar.lisp" you would do
+~(lisp-practice/foo/bar:main)~.
