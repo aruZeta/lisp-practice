@@ -7,7 +7,7 @@
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
   (defun positivep (object)
-    "Return T if object is a positive NUMBER or 0.
+    "Return T if OBJECT is a positive NUMBER or 0.
 Otherwise, return NIL."
     (when (numberp object)
       (>= object 0))))
