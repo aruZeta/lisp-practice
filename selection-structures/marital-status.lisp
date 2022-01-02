@@ -1,10 +1,10 @@
 ;;;; Make a program that asks the user the character (alias) representing his
 ;;;; marital status and shows the complete name
 
-(uiop:define-package :lisp-practice/selection-structures/src/simple-and-double/marital-status
+(uiop:define-package :lisp-practice/selection-structures/marital-status
   (:use :cl)
   (:export main))
-(in-package :lisp-practice/selection-structures/src/simple-and-double/marital-status)
+(in-package :lisp-practice/selection-structures/marital-status)
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
   (defun char-list-to-string-alist-p (object)

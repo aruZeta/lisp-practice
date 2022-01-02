@@ -3,10 +3,10 @@
 ;;;; how much each liter of water costs depending on the limits
 ;;;; Example: 15l = 10l of low price + 5l of medium price
 
-(uiop:define-package :lisp-practice/selection-structures/src/simple-and-double/calculate-water-bill
+(uiop:define-package :lisp-practice/selection-structures/calculate-water-bill
   (:use :cl)
   (:export main))
-(in-package :lisp-practice/selection-structures/src/simple-and-double/calculate-water-bill)
+(in-package :lisp-practice/selection-structures/calculate-water-bill)
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
   (defun positivep (object)

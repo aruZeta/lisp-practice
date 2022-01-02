@@ -1,10 +1,10 @@
 ;;;; Make a program that asks the user an amount of money and shows it in bills
 ;;;; Example: $565 would be 1 $500 bill, 1 $50, 1 $10 and 1 $5
 
-(uiop:define-package :lisp-practice/first-project/src/expression-exercises/ex6
+(uiop:define-package :lisp-practice/first-project/ex6
   (:use :cl)
   (:export main))
-(in-package :lisp-practice/first-project/src/expression-exercises/ex6)
+(in-package :lisp-practice/first-project/ex6)
 
 (defvar *bills* '(500 200 100 50 20 10 5)
   "LIST of INT specifying the value of the available bills.")

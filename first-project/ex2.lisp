@@ -1,9 +1,9 @@
 ;;;; Make a program that asks the user a number and shows if it is multiple of 7
 
-(uiop:define-package :lisp-practice/first-project/src/expression-exercises/ex2
+(uiop:define-package :lisp-practice/first-project/ex2
   (:use :cl)
   (:export main))
-(in-package :lisp-practice/first-project/src/expression-exercises/ex2)
+(in-package :lisp-practice/first-project/ex2)
 
 (defun main ()
   "Main function of the progam."

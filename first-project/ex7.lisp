@@ -1,10 +1,10 @@
 ;;;; Make a program that asks the user for 3 programs and shows if they are
 ;;;; ordered
 
-(uiop:define-package :lisp-practice/first-project/src/expression-exercises/ex7
+(uiop:define-package :lisp-practice/first-project/ex7
   (:use :cl)
   (:export main))
-(in-package :lisp-practice/first-project/src/expression-exercises/ex7)
+(in-package :lisp-practice/first-project/ex7)
 
 (defun main ()
   "Main function of the program."

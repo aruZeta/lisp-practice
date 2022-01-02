@@ -1,10 +1,10 @@
 ;;;; Make a program that asks the user for an amount of seconds and shows the
 ;;;; seconds and converts it to the format of hh:mm:ss
 
-(uiop:define-package :lisp-practice/first-project/src/expression-exercises/ex5
+(uiop:define-package :lisp-practice/first-project/ex5
   (:use :cl)
   (:export main))
-(in-package :lisp-practice/first-project/src/expression-exercises/ex5)
+(in-package :lisp-practice/first-project/ex5)
 
 (defun main ()
   "Main function of the program."

@@ -1,9 +1,9 @@
 ;;;; Make a program which asks a number and shows its double
 
-(uiop:define-package :lisp-practice/first-project/src/double
+(uiop:define-package :lisp-practice/first-project/double
   (:use :cl)
   (:export main))
-(in-package :lisp-practice/first-project/src/double)
+(in-package :lisp-practice/first-project/double)
 
 (defun main ()
   "Main function of the progam."

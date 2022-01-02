@@ -1,9 +1,9 @@
 ;;;; Make a program that asks the user his age and shows if it is a legal age
 
-(uiop:define-package :lisp-practice/first-project/src/expression-exercises/ex1
+(uiop:define-package :lisp-practice/first-project/ex1
   (:use :cl)
   (:export main))
-(in-package :lisp-practice/first-project/src/expression-exercises/ex1)
+(in-package :lisp-practice/first-project/ex1)
 
 (defun main ()
   "Main function of the progam."

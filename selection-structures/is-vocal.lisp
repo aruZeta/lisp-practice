@@ -1,9 +1,9 @@
 ;;;; Make a program that asks the user a character and shows if it is a vocal
 
-(uiop:define-package :lisp-practice/selection-structures/src/simple-and-double/is-vocal
+(uiop:define-package :lisp-practice/selection-structures/is-vocal
   (:use :cl)
   (:export main))
-(in-package :lisp-practice/selection-structures/src/simple-and-double/is-vocal)
+(in-package :lisp-practice/selection-structures/is-vocal)
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
   (defun char-list-p (object)

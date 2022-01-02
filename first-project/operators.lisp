@@ -1,9 +1,9 @@
 ;;;; Program to test some operators
 
-(uiop:define-package :lisp-practice/first-project/src/operators
+(uiop:define-package :lisp-practice/first-project/operators
   (:use :cl)
   (:export main))
-(in-package :lisp-practice/first-project/src/operators)
+(in-package :lisp-practice/first-project/operators)
 
 (defun main ()
   "Main function of the program."
