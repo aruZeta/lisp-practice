@@ -3,32 +3,10 @@
 
 (uiop:define-package :lisp-practice/selection-structures/marital-status
   (:use :cl)
+  (:import-from :lisp-practice/utils/types #:char-list-to-string-alist)
+  (:import-from :lisp-practice/utils/get-input #:get-marital-status-alias)
   (:export main))
 (in-package :lisp-practice/selection-structures/marital-status)
-
-(eval-when (:compile-toplevel :load-toplevel :execute)
-  (defun char-list-to-string-alist-p (object)
-    "Return T if OBJECT is a ALIST of CHARACTER LIST to STRING.
-Otherwise, return NIL."
-    (when (listp object)
-      (every #'char-list-to-string-cons-p object)))
-
-  (defun char-list-p (object)
-    "Return T if OBJECT is a LIST containing CHARACTER.
-Otherwise, return NIL."
-    (when (listp object)
-      (every #'characterp object)))
-
-  (defun char-list-to-string-cons-p (object)
-    "Return T if OBJECT is a CONS of CHARACTER LIST to STRING.
-Otherwise, return NIL."
-    (when (consp object)
-      (and (char-list-p (car object))
-           (stringp (cdr object))))))
-
-(deftype char-list-to-string-alist ()
-  "Type for objects which must be a ALIST of CHARACTER LIST to STRING."
-  `(satisfies char-list-to-string-alist-p))
 
 (declaim (type (char-list-to-string-alist) *alias-to-marital-status-list*))
 
@@ -48,15 +26,6 @@ MARITAL STATUS is a STRING with the full name of a marital status.")
     (format t
             "~a~&"
             (marital-status-from-alias alias))))
-
-(declaim (ftype (function () character) get-marital-status-alias))
-
-(defun get-marital-status-alias ()
-  "Ask the user to enter ALIAS and return its value.
-ALIAS is a CHARACTER representing an alias of MARITAL STATUS in
-`*alias-to-marital-status-alist*'."
-  (print "Enter the character representing your marital status (alias): ")
-  (read-char))
 
 (declaim (ftype (function (character) string) marital-status-from-alias))
 

@@ -2,19 +2,10 @@
 
 (uiop:define-package :lisp-practice/selection-structures/is-vocal
   (:use :cl)
+  (:import-from :lisp-practice/utils/types #:char-list)
+  (:import-from :lisp-practice/utils/get-input #:get-character)
   (:export main))
 (in-package :lisp-practice/selection-structures/is-vocal)
-
-(eval-when (:compile-toplevel :load-toplevel :execute)
-  (defun char-list-p (object)
-    "Return T if OBJECT is a LIST containing CHARACTER.
-Otherwise, return NIL."
-    (when (listp object)
-      (every #'characterp object))))
-
-(deftype char-list ()
-  "Type for objects which must be a CHARACTER LIST."
-  `(satisfies char-list-p))
 
 (declaim (type (char-list) +vocals+))
 
@@ -31,13 +22,6 @@ Otherwise, return NIL."
             (if (vocalp character)
                 ""
                 "n't"))))
-
-(declaim (ftype (function () character) get-character))
-
-(defun get-character ()
-  "Ask the user to enter CHARACTER and return its value."
-  (print "Enter a character: ")
-  (read-char))
 
 (declaim (ftype (function (character) boolean) vocalp))
 
