@@ -5,19 +5,10 @@
 
 (uiop:define-package :lisp-practice/selection-structures/calculate-water-bill
   (:use :cl)
+  (:import-from :lisp-practice/utils/get-input #:get-liters)
+  (:import-from :lisp-practice/utils/types #:positive)
   (:export main))
 (in-package :lisp-practice/selection-structures/calculate-water-bill)
-
-(eval-when (:compile-toplevel :load-toplevel :execute)
-  (defun positivep (object)
-    "Return T if object is a positive NUMBER or 0.
-Otherwise, return NIL."
-    (when (numberp object)
-      (>= object 0))))
-
-(deftype positive ()
-  "Type for objects which must be a positive NUMBER or 0."
-  `(satisfies positivep))
 
 (declaim (type (positive) *high-price*))
 (declaim (type (positive) *medium-price*))
@@ -58,14 +49,6 @@ LIMIT is a POSITIVE.")
     (format t
             "You'll have to pay $~a~&"
             (calc-water-bill liters))))
-
-(declaim (ftype (function () positive) get-liters))
-
-(defun get-liters ()
-  "Ask the user to enter LITERS and return its value.
-LITERS is a POSITIVE specifying an amount of liters."
-  (print "Enter how much liters you've used this month: ")
-  (read))
 
 (declaim (ftype (function (positive) positive) calc-water-bill))
 
