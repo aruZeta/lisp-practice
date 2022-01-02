@@ -2,6 +2,7 @@
 
 (uiop:define-package :lisp-practice/first-project/ex9
   (:use :cl)
+  (:import-from :lisp-practice/utils/get-input #:get-number)
   (:export main))
 (in-package :lisp-practice/first-project/ex9)
 
@@ -12,13 +13,6 @@
             "~a reversed: ~a~&"
             number
             (reverse-n number))))
-
-(declaim (ftype (function () integer) get-number))
-
-(defun get-number ()
-  "Ask the user to enter a number and return its value."
-  (print "Enter a number: ")
-  (read))
 
 (defun reverse-n (n)
   "Return the reverse of the number passed."

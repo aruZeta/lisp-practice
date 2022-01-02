@@ -2,6 +2,7 @@
 
 (uiop:define-package :lisp-practice/first-project/double
   (:use :cl)
+  (:import-from :lisp-practice/utils/get-input #:get-number)
   (:export main))
 (in-package :lisp-practice/first-project/double)
 
@@ -12,13 +13,6 @@
             "The double of ~a is: ~a~&"
             number
             (double-n number))))
-
-(declaim (ftype (function () integer) get-number))
-
-(defun get-number ()
-  "Ask the user to enter a number and return its value."
-  (print "Enter a number: ")
-  (read))
 
 (defun double-n (n)
   "Return the double of the number passed."

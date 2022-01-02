@@ -2,6 +2,7 @@
 
 (uiop:define-package :lisp-practice/first-project/ex2
   (:use :cl)
+  (:import-from :lisp-practice/utils/get-input #:get-number)
   (:export main))
 (in-package :lisp-practice/first-project/ex2)
 
@@ -14,13 +15,6 @@
             (if (multiple-of-7-p number)
                 ""
                 "n't"))))
-
-(declaim (ftype (function () integer) get-number))
-
-(defun get-number ()
-  "Ask the user to enter a number and return its value."
-  (print "Enter a number: ")
-  (read))
 
 (defun multiple-of-7-p (n)
   "Return T if the number passed is multiple of 7. Otherwise, return NIL."

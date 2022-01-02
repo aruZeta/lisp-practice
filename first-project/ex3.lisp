@@ -2,6 +2,7 @@
 
 (uiop:define-package :lisp-practice/first-project/ex3
   (:use :cl)
+  (:import-from :lisp-practice/utils/get-input #:get-year)
   (:export main))
 (in-package :lisp-practice/first-project/ex3)
 
@@ -14,13 +15,6 @@
             (if (leap-year-p year)
                 ""
                 "n't"))))
-
-(declaim (ftype (function () integer) get-year))
-
-(defun get-year ()
-  "Ask the user to enter a year and return its value."
-  (print "Enter a year: ")
-  (read))
 
 (defun leap-year-p (year)
   "Return T if the year passed is multiple of 4 and not of 100, or multiple of

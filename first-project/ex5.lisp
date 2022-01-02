@@ -3,6 +3,7 @@
 
 (uiop:define-package :lisp-practice/first-project/ex5
   (:use :cl)
+  (:import-from :lisp-practice/utils/get-input #:get-seconds)
   (:export main))
 (in-package :lisp-practice/first-project/ex5)
 
@@ -14,13 +15,6 @@
             (seconds-to-hours seconds)
             (seconds-to-minutes seconds t)
             (remainder-seconds seconds))))
-
-(declaim (ftype (function () integer) get-seconds))
-
-(defun get-seconds ()
-  "Ask the user to enter seconds and return its value."
-  (print "Enter the seconds you want to convert: ")
-  (read))
 
 (defun seconds-to-hours (seconds)
   "Return the number of hours there are in n seconds"

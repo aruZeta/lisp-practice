@@ -3,6 +3,7 @@
 
 (uiop:define-package :lisp-practice/first-project/ex7
   (:use :cl)
+  (:import-from :lisp-practice/utils/get-input #:get-number)
   (:export main))
 (in-package :lisp-practice/first-project/ex7)
 
@@ -16,13 +17,6 @@
             (if (ordered-p a b c)
                 ""
                 "n't"))))
-
-(declaim (ftype (function () integer) get-number))
-
-(defun get-number ()
-  "Ask the user to enter a number and return its value."
-  (print "Enter a number: ")
-  (read))
 
 (defun ordered-p (n1 n2 n3)
   "Return T if the 3 values passed are ordered from lowest to highest or highest

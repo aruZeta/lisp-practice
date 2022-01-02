@@ -3,6 +3,7 @@
 
 (uiop:define-package :lisp-practice/first-project/ex6
   (:use :cl)
+  (:import-from :lisp-practice/utils/get-input #:get-money)
   (:export main))
 (in-package :lisp-practice/first-project/ex6)
 
@@ -13,13 +14,6 @@
   "Main function of the program."
   (let ((money (get-money)))
     (print-bills money)))
-
-(declaim (ftype (function () integer) get-money))
-
-(defun get-money ()
-  "Ask the user to enter money and return its value."
-  (print "Enter the money you want to convert: ")
-  (read))
 
 (defun print-bills (money)
   "Shows the money in bills, the bills showed are stored in `*bills*'."

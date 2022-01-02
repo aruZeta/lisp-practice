@@ -6,7 +6,12 @@
   (:export get-liters
            get-number
            get-character
-           get-marital-status-alias))
+           get-marital-status-alias
+           get-age
+           get-year
+           get-weight
+           get-seconds
+           get-money))
 (in-package :lisp-practice/utils/get-input)
 
 (declaim (ftype (function () positive) get-liters))
@@ -39,3 +44,38 @@ ALIAS is a CHARACTER representing an alias of MARITAL STATUS in
 `*alias-to-marital-status-alist*'."
   (print "Enter the character representing your marital status (alias): ")
   (read-char))
+
+(declaim (ftype (function () integer) get-age))
+
+(defun get-age ()
+  "Ask for the age of the user and return its value."
+  (print "Enter your age: ")
+  (read))
+
+(declaim (ftype (function () integer) get-year))
+
+(defun get-year ()
+  "Ask the user to enter a year and return its value."
+  (print "Enter a year: ")
+  (read))
+
+(declaim (ftype (function () (or float integer)) get-weight))
+
+(defun get-weight ()
+  "Ask the user to enter a weight and return its value."
+  (print "Enter your weight: ")
+  (read))
+
+(declaim (ftype (function () integer) get-seconds))
+
+(defun get-seconds ()
+  "Ask the user to enter seconds and return its value."
+  (print "Enter the seconds you want to convert: ")
+  (read))
+
+(declaim (ftype (function () integer) get-money))
+
+(defun get-money ()
+  "Ask the user to enter money and return its value."
+  (print "Enter the money you want to convert: ")
+  (read))
