@@ -1,5 +1,10 @@
 ;;;; Make a program that asks the user a year and shows if it is leap year
 
+(uiop:define-package :lisp-practice/first-project/src/expression-exercises/ex3
+  (:use :cl)
+  (:export main))
+(in-package :lisp-practice/first-project/src/expression-exercises/ex3)
+
 (defun main ()
   "Main function of the program."
   (let ((year (get-year)))

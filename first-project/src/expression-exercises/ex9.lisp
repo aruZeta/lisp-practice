@@ -1,5 +1,10 @@
 ;;;; Make a program that asks the user for a number and shows it reversed
 
+(uiop:define-package :lisp-practice/first-project/src/expression-exercises/ex9
+  (:use :cl)
+  (:export main))
+(in-package :lisp-practice/first-project/src/expression-exercises/ex9)
+
 (defun main ()
   "Main function of the program."
   (let ((number (get-number)))

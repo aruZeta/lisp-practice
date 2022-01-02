@@ -1,6 +1,11 @@
 ;;;; Make a program that asks the user for the weight of something and shows
 ;;;; how much it would weigh in the moon
 
+(uiop:define-package :lisp-practice/first-project/src/expression-exercises/ex4
+  (:use :cl)
+  (:export main))
+(in-package :lisp-practice/first-project/src/expression-exercises/ex4)
+
 (defconstant +earth-gravity+ 9.8
   "INT specifying the gravity of the Earth.")
 (defconstant +moon-gravity+ 1.62
