@@ -1,4 +1,4 @@
-(uiop:define-package :lisp-practice/first-project/all
+(uiop:define-package :lisp-practice/first-project/package
   (:use :cl)
   (:mix-reexport
    :lisp-practice/first-project/double

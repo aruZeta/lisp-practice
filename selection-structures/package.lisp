@@ -1,4 +1,4 @@
-(uiop:define-package :lisp-practice/first-project/all
+(uiop:define-package :lisp-practice/selection-structures/package
   (:use :cl)
   (:mix-reexport
    :lisp-practice/selection-structures/calculate-water-bill
