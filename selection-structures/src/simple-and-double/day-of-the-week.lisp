@@ -2,6 +2,11 @@
 ;;;; shows its name
 ;;;; Example: 3 = "Wednesday"
 
+(uiop:define-package :lisp-practice/selection-structures/src/simple-and-double/day-of-the-week
+  (:use :cl)
+  (:export main))
+(in-package :lisp-practice/selection-structures/src/simple-and-double/day-of-the-week)
+
 (eval-when (:compile-toplevel :load-toplevel :execute)
   (defun string-list-p (object)
     "Return T if OBJECT is a LIST containing STRING.

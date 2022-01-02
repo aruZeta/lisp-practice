@@ -3,4 +3,5 @@
   :author "aru-hackZ"
   :license "GPL3"
   :class :package-inferred-system
-  :depends-on ("lisp-practice/first-project/all"))
+  :depends-on ("lisp-practice/first-project/all"
+               "lisp-practice/selection-structures/all"))
