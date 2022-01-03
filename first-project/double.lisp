@@ -14,6 +14,9 @@
             number
             (double-n number))))
 
+(declaim (ftype (function (integer) integer) double-n))
+
 (defun double-n (n)
-  "Return the double of the number passed."
+  "Return the double of N.
+N is a INTEGER."
   (* n 2))
