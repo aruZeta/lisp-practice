@@ -16,6 +16,9 @@
                 ""
                 "n't"))))
 
+(declaim (ftype (function (integer) boolean) multiple-of-7-p))
+
 (defun multiple-of-7-p (n)
-  "Return T if the number passed is multiple of 7. Otherwise, return NIL."
+  "Return T if N is multiple of 7. Otherwise, return NIL.
+N is a INTEGER."
   (= (mod n 7) 0))
