@@ -16,9 +16,12 @@
                 ""
                 "n't"))))
 
+(declaim (ftype (function (integer) boolean) leap-year-p))
+
 (defun leap-year-p (year)
-  "Return T if the year passed is multiple of 4 and not of 100, or multiple of
-400. Otherwise, return NIL."
+  "Return T if YEAR is a LEAP-YEAR. Otherwise, return NIL.
+YEAR is a INTEGER.
+YEAR is LEAP-YEAR if it is multiple of 4 and not of 100, or multiple of 400."
   (or (= (mod year 400) 0)
       (and (= (mod year 4) 0)
            (not (= (mod year 100) 0)))))
