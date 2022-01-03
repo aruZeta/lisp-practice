@@ -16,21 +16,32 @@
             (seconds-to-minutes seconds t)
             (remainder-seconds seconds))))
 
+(declaim (ftype (function (integer) integer) seconds-to-hours))
+
 (defun seconds-to-hours (seconds)
-  "Return the number of hours there are in n seconds"
+  "Return the number of hours there are in SECONDS.
+SECONDS is a INTEGER."
   (floor seconds 3600))
 
+(declaim (ftype (function (integer &optional boolean) integer)
+                seconds-to-minutes))
+
 (defun seconds-to-minutes (seconds &optional remainder-from-hour-p)
-  "Return the number of minutes there are in n seconds or if
+  "Return the number of minutes there are in SECONDS or if
 REMAINDER-FROM-HOUR-P is non-nil the remainder minutes from calculating the
-hours."
+hours.
+SECONDS is a INTEGER."
   (if remainder-from-hour-p
       (floor (remainder-seconds seconds t) 60)
       (floor seconds 60)))
 
+(declaim (ftype (function (integer &optional boolean) integer)
+                remainder-seconds))
+
 (defun remainder-seconds (seconds &optional remainder-from-hour-p)
-  "Return the remainder of seconds from calculating the minutes or if
-REMAINDER-FROM-HOUR-P is non-nil from calculating the hours."
+  "Return the remainder from calculating the minutes there are in SECONDS
+or if REMAINDER-FROM-HOUR-P is non-nil from calculating the hours.
+SECONDS is a INTEGER."
   (if remainder-from-hour-p
       (mod seconds 3600)
       (mod (remainder-seconds seconds t) 60)))
