@@ -14,7 +14,11 @@
             age
             (if (legal-age-p age) "yes" "no"))))
 
+(declaim (ftype (function (integer &key (:legal-age integer)) boolean)
+                legal-age-p))
+
 (defun legal-age-p (age &key (legal-age 18))
-  "Return T if the passed age is above or equal to the default legal age, or the
-one passed. Otherwise, return NIL."
+  "Return T if AGE is above or equal to LEGAL-AGE. Otherwise, return NIL.
+AGE is a INTEGER.
+LEGAL-AGE is a INTEGER which defaults to 18."
   (>= age legal-age))
