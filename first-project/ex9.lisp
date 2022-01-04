@@ -14,8 +14,11 @@
             number
             (reverse-n number))))
 
+(declaim (ftype (function (integer) integer) reverse-n))
+
 (defun reverse-n (n)
-  "Return the reverse of the number passed."
+  "Return the reverse of N.
+N is a INTEGER."
   (let ((reversed-n 0))
     (loop while (> n 0) do
       (setq reversed-n (+ (* reversed-n 10)
