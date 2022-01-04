@@ -14,12 +14,14 @@
         (c (get-number)))
     (format t
             "The numbers are~a ordered"
-            (if (ordered-p a b c)
+            (if (orderedp a b c)
                 ""
                 "n't"))))
 
-(defun ordered-p (n1 n2 n3)
-  "Return T if the 3 values passed are ordered from lowest to highest or highest
-to lowest. Otherwise, return NIL"
+(declaim (ftype (function (number number number) boolean) orderedp))
+
+(defun orderedp (n1 n2 n3)
+  "Return T if N1, N2 and N3 are in order. Otherwise, return NIL.
+N1, N2 and N3 are NUMBER."
   (or (> n1 n2 n3)
       (< n1 n2 n3)))
