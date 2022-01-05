@@ -2,7 +2,10 @@
 
 (uiop:define-package :lisp-practice/utils/get-input
   (:use :cl)
-  (:import-from :lisp-practice/utils/types #:positive)
+  (:import-from :lisp-practice/utils/types
+                #:positive
+                #:date
+                #:day)
   (:export get-liters
            get-number
            get-character
@@ -11,7 +14,8 @@
            get-year
            get-weight
            get-seconds
-           get-money))
+           get-money
+           get-date))
 (in-package :lisp-practice/utils/get-input)
 
 (declaim (ftype (function () positive) get-liters))
@@ -79,3 +83,20 @@ ALIAS is a CHARACTER representing an alias of MARITAL STATUS in
   "Ask the user to enter money and return its value."
   (format t "Enter the money you want to convert: ")
   (read))
+
+(declaim (ftype (function (&optional boolean boolean) (or date day)) get-date))
+
+(defun get-date (&optional monthp yearp)
+  "Ask the user to enter a date and return its value.
+By default it will only get a day.
+If MONTHP is non-nil it will ask for month too.
+If YEARP is non-nil it will ask for year too."
+  (format t "Enter a day: ")
+  (let ((date (read)))
+    (when monthp
+      (format t "Enter a month: ")
+      (setq date `(,date ,(read))))
+    (when yearp
+      (format t "Enter a year: ")
+      (setq date `(,(car date) ,(nth 1 date) ,(read))))
+    date))
