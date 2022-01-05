@@ -5,6 +5,7 @@
   (:export positive
            string-list
            char-list
+           int-list
            char-list-to-string-alist))
 (in-package :lisp-practice/utils/types)
 
@@ -26,6 +27,12 @@ Otherwise, return NIL."
 Otherwise, return NIL."
     (when (listp object)
       (every #'characterp object)))
+
+  (defun int-list-p (object)
+    "Return T if OBJECT is a LIST containing INTEGER.
+Otherwise, return NIL."
+    (when (listp object)
+      (every #'integerp object)))
 
   (defun char-list-to-string-alist-p (object)
     "Return T if OBJECT is a ALIST of CHARACTER LIST to STRING.
@@ -51,6 +58,10 @@ Otherwise, return NIL."
 (deftype char-list ()
   "Type for objects which must be a CHARACTER LIST."
   `(satisfies char-list-p))
+
+(deftype int-list ()
+  "Type for objects which must be a INTEGER LIST."
+  `(satisfies int-list-p))
 
 (deftype char-list-to-string-alist ()
   "Type for objects which must be a ALIST of CHARACTER LIST to STRING."
