@@ -6,4 +6,5 @@
    :lisp-practice/selection-structures/is-vocal
    :lisp-practice/selection-structures/marital-status
    :lisp-practice/selection-structures/horoscope
-   :lisp-practice/selection-structures/greatest-of-2))
+   :lisp-practice/selection-structures/greatest-of-2
+   :lisp-practice/selection-structures/order-2-numbers))
