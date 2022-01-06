@@ -14,6 +14,8 @@
             "The greatest is: ~a~&"
             (greatest-of-2 n1 n2))))
 
+(declaim (ftype (function (integer integer) integer) greatest-of-2))
+
 (defun greatest-of-2 (n1 n2)
   "Return the greatest number passed, N1 or N2.
 N1 is a INTEGER.
