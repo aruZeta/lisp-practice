@@ -8,4 +8,5 @@
    :lisp-practice/selection-structures/horoscope
    :lisp-practice/selection-structures/greatest-of-2
    :lisp-practice/selection-structures/order-2-numbers
-   :lisp-practice/selection-structures/order-3-numbers))
+   :lisp-practice/selection-structures/order-3-numbers
+   :lisp-practice/selection-structures/odd-or-even))
