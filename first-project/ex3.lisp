@@ -22,6 +22,6 @@
   "Return T if YEAR is a LEAP-YEAR. Otherwise, return NIL.
 YEAR is a INTEGER.
 YEAR is LEAP-YEAR if it is multiple of 4 and not of 100, or multiple of 400."
-  (or (= (mod year 400) 0)
-      (and (= (mod year 4) 0)
-           (not (= (mod year 100) 0)))))
+  (or (zerop (mod year 400))
+      (and (zerop (mod year 4))
+           (not (zerop (mod year 100))))))

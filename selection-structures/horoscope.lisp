@@ -46,7 +46,7 @@ MONTH is a INTEGER."
          (actual-sign (nth pos +zodiac-signs+)))
     (if (>= day (car actual-sign))
         (cdr actual-sign)
-        (cdr (nth (if (= pos 0)
+        (cdr (nth (if (zerop pos)
                       11
                       (1- pos))
                   +zodiac-signs+)))))

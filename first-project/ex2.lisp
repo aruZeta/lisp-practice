@@ -21,4 +21,4 @@
 (defun multiple-of-7-p (n)
   "Return T if N is multiple of 7. Otherwise, return NIL.
 N is a INTEGER."
-  (= (mod n 7) 0))
+  (zerop (mod n 7)))
