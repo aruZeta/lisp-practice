@@ -2,7 +2,8 @@
 
 (uiop:define-package :lisp-practice/first-project/ex1
   (:use :cl)
-  (:import-from :lisp-practice/utils/get-input #:get-age)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-age)
   (:export main))
 (in-package :lisp-practice/first-project/ex1)
 

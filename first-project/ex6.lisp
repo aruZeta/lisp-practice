@@ -3,8 +3,10 @@
 
 (uiop:define-package :lisp-practice/first-project/ex6
   (:use :cl)
-  (:import-from :lisp-practice/utils/types #:int-list)
-  (:import-from :lisp-practice/utils/get-input #:get-money)
+  (:import-from :lisp-practice/utils/types
+                #:int-list)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-money)
   (:export main))
 (in-package :lisp-practice/first-project/ex6)
 

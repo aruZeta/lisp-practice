@@ -3,7 +3,8 @@
 
 (uiop:define-package :lisp-practice/first-project/ex4
   (:use :cl)
-  (:import-from :lisp-practice/utils/get-input #:get-weight)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-weight)
   (:export main))
 (in-package :lisp-practice/first-project/ex4)
 

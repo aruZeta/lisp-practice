@@ -2,7 +2,8 @@
 
 (uiop:define-package :lisp-practice/first-project/ex3
   (:use :cl)
-  (:import-from :lisp-practice/utils/get-input #:get-year)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-year)
   (:export main))
 (in-package :lisp-practice/first-project/ex3)
 

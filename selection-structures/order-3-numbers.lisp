@@ -3,8 +3,10 @@
 
 (uiop:define-package :lisp-practice/selection-structures/order-3-numbers
   (:use :cl)
-  (:import-from :lisp-practice/utils/types #:int-list)
-  (:import-from :lisp-practice/utils/get-input #:get-number)
+  (:import-from :lisp-practice/utils/types
+                #:int-list)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-number)
   (:export main))
 (in-package :lisp-practice/selection-structures/order-3-numbers)
 

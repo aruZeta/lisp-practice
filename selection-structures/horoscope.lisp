@@ -3,8 +3,10 @@
 
 (uiop:define-package :lisp-practice/selection-structures/horoscope
   (:use :cl)
-  (:import-from :lisp-practice/utils/types #:int-to-string-alist)
-  (:import-from :lisp-practice/utils/get-input #:get-date)
+  (:import-from :lisp-practice/utils/types
+                #:int-to-string-alist)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-date)
   (:export main))
 (in-package :lisp-practice/selection-structures/horoscope)
 

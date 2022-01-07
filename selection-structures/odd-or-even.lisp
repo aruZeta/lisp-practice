@@ -2,7 +2,8 @@
 
 (uiop:define-package :lisp-practice/selection-structures/odd-or-even
   (:use :cl)
-  (:import-from :lisp-practice/utils/get-input #:get-number)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-number)
   (:export main))
 (in-package :lisp-practice/selection-structures/odd-or-even)
 

@@ -2,8 +2,10 @@
 
 (uiop:define-package :lisp-practice/selection-structures/is-vocal
   (:use :cl)
-  (:import-from :lisp-practice/utils/types #:char-list)
-  (:import-from :lisp-practice/utils/get-input #:get-character)
+  (:import-from :lisp-practice/utils/types
+                #:char-list)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-character)
   (:export main))
 (in-package :lisp-practice/selection-structures/is-vocal)
 

@@ -3,8 +3,10 @@
 
 (uiop:define-package :lisp-practice/selection-structures/marital-status
   (:use :cl)
-  (:import-from :lisp-practice/utils/types #:char-list-to-string-alist)
-  (:import-from :lisp-practice/utils/get-input #:get-marital-status-alias)
+  (:import-from :lisp-practice/utils/types
+                #:char-list-to-string-alist)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-marital-status-alias)
   (:export main))
 (in-package :lisp-practice/selection-structures/marital-status)
 

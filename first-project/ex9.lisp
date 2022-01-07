@@ -2,7 +2,8 @@
 
 (uiop:define-package :lisp-practice/first-project/ex9
   (:use :cl)
-  (:import-from :lisp-practice/utils/get-input #:get-number)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-number)
   (:export main))
 (in-package :lisp-practice/first-project/ex9)
 

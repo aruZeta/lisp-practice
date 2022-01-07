@@ -3,7 +3,8 @@
 
 (uiop:define-package :lisp-practice/first-project/ex5
   (:use :cl)
-  (:import-from :lisp-practice/utils/get-input #:get-seconds)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-seconds)
   (:export main))
 (in-package :lisp-practice/first-project/ex5)
 

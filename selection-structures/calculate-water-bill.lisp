@@ -5,8 +5,10 @@
 
 (uiop:define-package :lisp-practice/selection-structures/calculate-water-bill
   (:use :cl)
-  (:import-from :lisp-practice/utils/types #:positive)
-  (:import-from :lisp-practice/utils/get-input #:get-liters)
+  (:import-from :lisp-practice/utils/types
+                #:positive)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-liters)
   (:export main))
 (in-package :lisp-practice/selection-structures/calculate-water-bill)
 

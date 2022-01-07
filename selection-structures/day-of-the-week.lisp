@@ -4,8 +4,10 @@
 
 (uiop:define-package :lisp-practice/selection-structures/day-of-the-week
   (:use :cl)
-  (:import-from :lisp-practice/utils/types #:string-list)
-  (:import-from :lisp-practice/utils/get-input #:get-number)
+  (:import-from :lisp-practice/utils/types
+                #:string-list)
+  (:import-from :lisp-practice/utils/get-input
+                #:get-number)
   (:export main))
 (in-package :lisp-practice/selection-structures/day-of-the-week)
 
