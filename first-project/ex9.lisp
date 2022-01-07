@@ -1,6 +1,6 @@
-;;;; Make a program that asks the user for a number and shows it reversed
-
 (uiop:define-package :lisp-practice/first-project/ex9
+  (:documentation
+   "Program that asks the user for a number and shows it reversed.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-number)

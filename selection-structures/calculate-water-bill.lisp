@@ -1,9 +1,9 @@
-;;;; Make a program that asks the user how much liters of water he has used in
-;;;; a month and shows how much he will have to pay keeping in mind depending
-;;;; how much each liter of water costs depending on the limits
-;;;; Example: 15l = 10l of low price + 5l of medium price
-
 (uiop:define-package :lisp-practice/selection-structures/calculate-water-bill
+  (:documentation
+   "Program that asks the user how much liters of water he has used in a month
+and shows how much he will have to pay keeping in mind depending how much each
+liter of water costs depending on the limits.
+Example: 15l = 10l of low price + 5l of medium price")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
                 #:positive)

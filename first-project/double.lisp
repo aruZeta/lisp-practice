@@ -1,6 +1,6 @@
-;;;; Make a program which asks a number and shows its double
-
 (uiop:define-package :lisp-practice/first-project/double
+  (:documentation
+   "Program that asks a number and shows its double.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-number)

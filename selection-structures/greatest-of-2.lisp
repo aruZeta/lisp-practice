@@ -1,6 +1,6 @@
-;;;; Make a program that asks the user 2 numbers and shows which is the greatest
-
 (uiop:define-package :lisp-practice/selection-structures/greatest-of-2
+  (:documentation
+   "Program that asks the user 2 numbers and shows which is the greatest.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-number)

@@ -1,7 +1,7 @@
-;;;; Make a program that asks the user 2 numbers and shows them ordered from
-;;;; highest to lowest
 
 (uiop:define-package :lisp-practice/selection-structures/order-2-numbers
+  (:documentation
+   "Program that asks the user 2 numbers and shows them ordered.")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
                 #:int-list)

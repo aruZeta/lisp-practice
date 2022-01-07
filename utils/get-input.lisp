@@ -1,6 +1,7 @@
-;;;; Get input from user functions used by the programs
 
 (uiop:define-package :lisp-practice/utils/get-input
+  (:documentation
+   "Collection of functions to get input from the user.")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
                 #:positive

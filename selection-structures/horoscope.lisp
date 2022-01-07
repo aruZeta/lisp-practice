@@ -1,7 +1,6 @@
-;;;; Make a program that asks the user a date (dd/mm) and shows the associated
-;;;; zodiac sign
-
 (uiop:define-package :lisp-practice/selection-structures/horoscope
+  (:documentation
+   "Program that asks the user a date and shows the associated zodiac sign.")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
                 #:int-to-string-alist)

@@ -1,7 +1,6 @@
-;;;; Make a program that asks the user for 3 programs and shows if they are
-;;;; ordered
-
 (uiop:define-package :lisp-practice/first-project/ex7
+  (:documentation
+   "Program that asks the user for 3 numbers and shows if they are ordered.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-number)

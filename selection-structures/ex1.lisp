@@ -1,7 +1,7 @@
-;;;; Make a program that asks the user the 3 sides of a triangle and shows the
-;;;; type of triangle depending on the angles
-
 (uiop:define-package :lisp-practice/selection-structures/ex1
+  (:documentation
+   "Program that asks the user the 3 sides of a triangle and shows the type of
+triangle depending on the angles.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-number)

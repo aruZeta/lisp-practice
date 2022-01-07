@@ -1,6 +1,6 @@
-;;;; Make a program that asks the user a number and shows if it is multiple of 7
-
 (uiop:define-package :lisp-practice/first-project/ex2
+  (:documentation
+   "Program that asks the user a number and shows if it is multiple of 7.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-number)

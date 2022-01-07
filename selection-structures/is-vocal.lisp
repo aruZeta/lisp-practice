@@ -1,6 +1,6 @@
-;;;; Make a program that asks the user a character and shows if it is a vocal
-
 (uiop:define-package :lisp-practice/selection-structures/is-vocal
+  (:documentation
+   "Program that asks the user a character and shows if it is a vocal.")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
                 #:char-list)

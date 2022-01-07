@@ -1,7 +1,7 @@
-;;;; Make a program that asks the user for an amount of seconds and shows the
-;;;; seconds and converts it to the format of hh:mm:ss
-
 (uiop:define-package :lisp-practice/first-project/ex5
+  (:documentation
+   "Program that asks the user for an amount of seconds, converts them to time
+format hh:mm:ss and shows it.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-seconds)

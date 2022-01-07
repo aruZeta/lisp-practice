@@ -1,6 +1,6 @@
-;;;; Make a program that asks the user a year and shows if it is leap year
-
 (uiop:define-package :lisp-practice/first-project/ex3
+  (:documentation
+   "Program that asks the user a year and shows if it is leap year.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-year)

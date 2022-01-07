@@ -1,6 +1,6 @@
-;;;; Make a program that asks the user his age and shows if it is a legal age
-
 (uiop:define-package :lisp-practice/first-project/ex1
+  (:documentation
+   "Program that asks the user his age and shows if it is a legal age.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-age)

@@ -1,6 +1,6 @@
-;;;; Make a program that asks the user a number and shows if it is odd or even
-
 (uiop:define-package :lisp-practice/selection-structures/odd-or-even
+  (:documentation
+   "Program that asks the user a number and shows if it is odd or even.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-number)

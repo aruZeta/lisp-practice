@@ -1,6 +1,6 @@
-;;;; Custom types used by the programs
-
 (uiop:define-package :lisp-practice/utils/types
+  (:documentation
+   "Collection of custom types.")
   (:use :cl)
   (:export positive
            string-list

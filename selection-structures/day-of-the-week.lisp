@@ -1,8 +1,7 @@
-;;;; Make a program that asks the user a number of a day of the week and
-;;;; shows its name
-;;;; Example: 3 = "Wednesday"
-
 (uiop:define-package :lisp-practice/selection-structures/day-of-the-week
+  (:documentation
+   "Program that asks the user a number of a day of the week and shows its name.
+Example: 3 = \"Wednesday\"")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
                 #:string-list)

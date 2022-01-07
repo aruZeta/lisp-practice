@@ -1,7 +1,7 @@
-;;;; Make a program that asks the user for the weight of something and shows
-;;;; how much it would weigh in the moon
-
 (uiop:define-package :lisp-practice/first-project/ex4
+  (:documentation
+   "Program that asks the user for the weight of something and shows how much it
+would weigh in the moon.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
                 #:get-weight)

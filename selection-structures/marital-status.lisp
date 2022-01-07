@@ -1,7 +1,7 @@
-;;;; Make a program that asks the user the character (alias) representing his
-;;;; marital status and shows the complete name
-
 (uiop:define-package :lisp-practice/selection-structures/marital-status
+  (:documentation
+   "Program that asks the user the character (alias) representing his marital
+status and shows the complete name.")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
                 #:char-list-to-string-alist)

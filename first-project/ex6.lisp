@@ -1,7 +1,7 @@
-;;;; Make a program that asks the user an amount of money and shows it in bills
-;;;; Example: $565 would be 1 $500 bill, 1 $50, 1 $10 and 1 $5
-
 (uiop:define-package :lisp-practice/first-project/ex6
+  (:documentation
+   "Program that asks the user an amount of money and shows it in bills.
+Example: $565 would be 1 $500 bill, 1 $50, 1 $10 and 1 $5.")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
                 #:int-list)

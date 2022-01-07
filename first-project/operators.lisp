@@ -1,6 +1,6 @@
-;;;; Program to test some operators
-
 (uiop:define-package :lisp-practice/first-project/operators
+  (:documentation
+   "Program to test some operators.")
   (:use :cl)
   (:export main))
 (in-package :lisp-practice/first-project/operators)
