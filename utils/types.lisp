@@ -82,12 +82,13 @@ If YEAR is passed and it is a leap year, month 2 will have 1 day more."
       (and (> object 0)
            (<= object (if month
                           (let ((days (nth (1- month) +days-of-months+)))
-                            (when year
-                              (when (and (leap-year-p year)
-                                         (= month 2))
-                                (incf days)))
-                            days)
+                            (if (when year
+                                  (and (leap-year-p year)
+                                       (= month 2)))
+                                (1+ days)
+                                days))
                           31)))))
+
   (defun monthp (object)
     "Return T if OBJECT is a MONTH.
 Otherwise, return NIL."
