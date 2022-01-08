@@ -14,6 +14,8 @@
            get-year
            get-weight
            get-seconds
+           get-minutes
+           get-hours
            get-money
            get-date))
 (in-package :lisp-practice/utils/get-input)
