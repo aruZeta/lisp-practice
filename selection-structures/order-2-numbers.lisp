@@ -1,4 +1,3 @@
-
 (uiop:define-package :lisp-practice/selection-structures/order-2-numbers
   (:documentation
    "Program that asks the user 2 numbers and shows them ordered.")

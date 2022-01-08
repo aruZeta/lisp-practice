@@ -1,4 +1,3 @@
-
 (uiop:define-package :lisp-practice/utils/get-input
   (:documentation
    "Collection of functions to get input from the user.")

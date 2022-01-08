@@ -1,4 +1,3 @@
-
 (uiop:define-package :lisp-practice/selection-structures/order-3-numbers
   (:documentation
    "Program that asks the user 3 numbers and shows them ordered.")
