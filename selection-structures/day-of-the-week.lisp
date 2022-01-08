@@ -38,4 +38,4 @@ DAY-OF-THE-WEEK is a STRING.")
 DAY-OF-THE-WEEK is a STRING.
 NUMBER is a INTEGER.
 Note: The first DAY-OF-THE-WEEK stands by 1, not 0."
-  (nth (1- number) *days-of-the-week*))
+  (nth (1- number) +days-of-the-week+))
