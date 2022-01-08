@@ -99,3 +99,8 @@ If YEARP is non-nil it will ask for year too."
       (format t "Enter a year: ")
       (setq date `(,(car date) ,(nth 1 date) ,(read))))
     date))
+
+(defun get-dni ()
+  "Ask the user to enter his dni and return its value."
+  (format t "Enter your DNI: ")
+  (read))
