@@ -77,6 +77,20 @@ ALIAS is a CHARACTER representing an alias of MARITAL STATUS in
   (format t "Enter the seconds you want to convert: ")
   (read))
 
+(declaim (ftype (function () integer) get-minutes))
+
+(defun get-minutes ()
+  "Ask the user to enter minutes and return its value."
+  (format t "Enter the minutes you want to convert: ")
+  (read))
+
+(declaim (ftype (function () integer) get-hours))
+
+(defun get-hours ()
+  "Ask the user to enter hours and return its value."
+  (format t "Enter the hours you want to convert: ")
+  (read))
+
 (declaim (ftype (function () integer) get-money))
 
 (defun get-money ()

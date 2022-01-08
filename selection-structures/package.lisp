@@ -10,4 +10,5 @@
    :lisp-practice/selection-structures/order-2-numbers
    :lisp-practice/selection-structures/order-3-numbers
    :lisp-practice/selection-structures/odd-or-even
-   :lisp-practice/selection-structures/ex1))
+   :lisp-practice/selection-structures/ex1
+   :lisp-practice/selection-structures/ex2))
