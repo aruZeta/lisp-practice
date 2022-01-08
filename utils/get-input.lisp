@@ -5,19 +5,7 @@
   (:import-from :lisp-practice/utils/types
                 #:positive
                 #:date
-                #:day)
-  (:export get-liters
-           get-number
-           get-character
-           get-marital-status-alias
-           get-age
-           get-year
-           get-weight
-           get-seconds
-           get-minutes
-           get-hours
-           get-money
-           get-date))
+                #:day))
 (in-package :lisp-practice/utils/get-input)
 
 (declaim (ftype (function () character)

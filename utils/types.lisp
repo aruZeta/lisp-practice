@@ -1,14 +1,7 @@
 (uiop:define-package :lisp-practice/utils/types
   (:documentation
    "Collection of custom types.")
-  (:use :cl)
-  (:export positive
-           string-list
-           char-list
-           int-list
-           char-list-to-string-alist
-           day
-           date))
+  (:use :cl))
 (in-package :lisp-practice/utils/types)
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
