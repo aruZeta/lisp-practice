@@ -9,7 +9,10 @@
   (:export main))
 (in-package :lisp-practice/selection-structures/is-vocal)
 
-(declaim (type (char-list) +vocals+))
+(declaim (type (char-list)
+               +vocals+)
+         (ftype (function (character) boolean)
+                vocalp))
 
 (defconstant +vocals+ '(#\a #\e #\i #\o #\u
                         #\A #\E #\I #\O #\U)
@@ -24,8 +27,6 @@
             (if (vocalp character)
                 ""
                 "n't"))))
-
-(declaim (ftype (function (character) boolean) vocalp))
 
 (defun vocalp (char)
   "Return T when CHARACTER appears in `+vocals+'.

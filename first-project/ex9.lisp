@@ -7,6 +7,9 @@
   (:export main))
 (in-package :lisp-practice/first-project/ex9)
 
+(declaim (ftype (function (integer) integer)
+                reverse-n))
+
 (defun main ()
   "Main function of the program."
   (let ((number (get-number)))
@@ -14,8 +17,6 @@
             "~a reversed: ~a~&"
             number
             (reverse-n number))))
-
-(declaim (ftype (function (integer) integer) reverse-n))
 
 (defun reverse-n (n)
   "Return the reverse of N.

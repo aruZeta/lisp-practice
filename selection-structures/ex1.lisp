@@ -8,6 +8,9 @@ triangle depending on the angles.")
   (:export main))
 (in-package :lisp-practice/selection-structures/ex1)
 
+(declaim (ftype (function (integer integer integer) string)
+                triangle-type-angles))
+
 (defun main ()
   "Main function of the program"
   (let ((side1 (get-number))
@@ -16,9 +19,6 @@ triangle depending on the angles.")
     (format t
             "The triangle is: ~a~&"
             (triangle-type-angles side1 side2 side3))))
-
-(declaim (ftype (function (integer integer integer) string)
-                triangle-type-angles))
 
 (defun triangle-type-angles (side1 side2 side3)
   "Return TYPE depending on SIDE1, SIDE2 and SIDE3.

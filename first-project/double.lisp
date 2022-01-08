@@ -7,6 +7,9 @@
   (:export main))
 (in-package :lisp-practice/first-project/double)
 
+(declaim (ftype (function (integer) integer)
+                double-n))
+
 (defun main ()
   "Main function of the progam."
   (let ((number (get-number)))
@@ -14,8 +17,6 @@
             "The double of ~a is: ~a~&"
             number
             (double-n number))))
-
-(declaim (ftype (function (integer) integer) double-n))
 
 (defun double-n (n)
   "Return the double of N.

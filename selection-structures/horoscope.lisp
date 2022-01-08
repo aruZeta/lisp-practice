@@ -9,7 +9,10 @@
   (:export main))
 (in-package :lisp-practice/selection-structures/horoscope)
 
-(declaim (type (int-to-string-alist) +zodiac-signs+))
+(declaim (type (int-to-string-alist)
+               +zodiac-signs+)
+         (ftype (function (integer integer) string)
+                associated-zodiac-sign))
 
 (defconstant +zodiac-signs+ '((20 . "Aquarius")
                               (19 . "Pisces")
@@ -35,8 +38,6 @@ there is no need to store the month too.")
     (format t
             "The zodiac sign associated to that date is: ~a~&"
             (associated-zodiac-sign (car date) (nth 1 date)))))
-
-(declaim (ftype (function (integer integer) string) zodiac-sign))
 
 (defun associated-zodiac-sign (day month)
   "Return ZODIAC-SIGN associated to DAY and MONTH.

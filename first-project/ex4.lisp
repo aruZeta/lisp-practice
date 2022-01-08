@@ -8,8 +8,11 @@ would weigh in the moon.")
   (:export main))
 (in-package :lisp-practice/first-project/ex4)
 
-(declaim (type (float) +earth-gravity+))
-(declaim (type (float) +moon-gravity+))
+(declaim (type (float)
+               +earth-gravity+
+               +moon-gravity+)
+         (ftype (function ((or float integer)) float)
+                weight-in-moon))
 
 (defconstant +earth-gravity+ 9.8
   "INT specifying the gravity of the Earth.")
@@ -22,8 +25,6 @@ would weigh in the moon.")
     (format t
             "In the moon you would weigh: ~a~&"
             (weight-in-moon weight))))
-
-(declaim (ftype (function ((or float integer)) float) weight-in-moon))
 
 (defun weight-in-moon (weight)
   "Return how much WEIGHT would weigh in the moon.

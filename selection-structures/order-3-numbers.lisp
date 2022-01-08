@@ -9,6 +9,9 @@
   (:export main))
 (in-package :lisp-practice/selection-structures/order-3-numbers)
 
+(declaim (ftype (function (integer integer integer) int-list)
+                sort-3))
+
 (defun main ()
   "Main function of the program."
   (let ((n1 (get-number))
@@ -17,8 +20,6 @@
     (dolist (n (sort-3 n1 n2 n3))
       (format t "~a " n))
     (format t "~&")))
-
-(declaim (ftype (function (integer integer integer) int-list) sort-3))
 
 (defun sort-3 (n1 n2 n3)
   "Return LIST with N1, N2 and N3 ordered from highest to lowest.

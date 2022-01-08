@@ -10,7 +10,10 @@ Example: $565 would be 1 $500 bill, 1 $50, 1 $10 and 1 $5.")
   (:export main))
 (in-package :lisp-practice/first-project/ex6)
 
-(declaim (type (int-list) *bills*))
+(declaim (type (int-list)
+               *bills*)
+         (ftype (function (integer))
+                print-bills))
 
 (defvar *bills* '(500 200 100 50 20 10 5)
   "INTEGER LIST specifying the value of the available bills.")
@@ -19,8 +22,6 @@ Example: $565 would be 1 $500 bill, 1 $50, 1 $10 and 1 $5.")
   "Main function of the program."
   (let ((money (get-money)))
     (print-bills money)))
-
-(declaim (ftype (function (integer)) print-bills))
 
 (defun print-bills (money)
   "Shows how much of each BILL is necessary to reach MONEY.

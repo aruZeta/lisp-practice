@@ -7,6 +7,9 @@
   (:export main))
 (in-package :lisp-practice/first-project/ex3)
 
+(declaim (ftype (function (integer) boolean)
+                leap-year-p))
+
 (defun main ()
   "Main function of the program."
   (let ((year (get-year)))
@@ -16,8 +19,6 @@
             (if (leap-year-p year)
                 ""
                 "n't"))))
-
-(declaim (ftype (function (integer) boolean) leap-year-p))
 
 (defun leap-year-p (year)
   "Return T if YEAR is a LEAP-YEAR. Otherwise, return NIL.

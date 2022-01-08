@@ -10,7 +10,10 @@ status and shows the complete name.")
   (:export main))
 (in-package :lisp-practice/selection-structures/marital-status)
 
-(declaim (type (char-list-to-string-alist) *alias-to-marital-status-list*))
+(declaim (type (char-list-to-string-alist)
+               *alias-to-marital-status-list*)
+         (ftype (function (character) string)
+                marital-status-from-alias))
 
 (defvar *alias-to-marital-status-alist*
   '(((#\n #\N) . "Never married")
@@ -28,8 +31,6 @@ MARITAL STATUS is a STRING with the full name of a marital status.")
     (format t
             "~a~&"
             (marital-status-from-alias alias))))
-
-(declaim (ftype (function (character) string) marital-status-from-alias))
 
 (defun marital-status-from-alias (alias)
   "Return MARITAL STATUS bound to ALIAS in `*alias-to-marital-status-alist*'.

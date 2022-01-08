@@ -7,6 +7,9 @@
   (:export main))
 (in-package :lisp-practice/first-project/ex2)
 
+(declaim (ftype (function (integer) boolean)
+                multiple-of-7-p))
+
 (defun main ()
   "Main function of the progam."
   (let ((number (get-number)))
@@ -16,8 +19,6 @@
             (if (multiple-of-7-p number)
                 ""
                 "n't"))))
-
-(declaim (ftype (function (integer) boolean) multiple-of-7-p))
 
 (defun multiple-of-7-p (n)
   "Return T if N is multiple of 7. Otherwise, return NIL.

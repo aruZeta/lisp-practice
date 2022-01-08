@@ -13,6 +13,9 @@ Example: 2h80m100s => 3h21m40s")
   (:export main))
 (in-package :lisp-practice/selection-structures/ex2)
 
+(declaim (ftype (function (integer &optional integer integer) int-list)
+                normalize-time))
+
 (defun main ()
   "Main function of the program."
   (let ((hours (get-hours))
@@ -21,9 +24,6 @@ Example: 2h80m100s => 3h21m40s")
     (format t
             "~{~a~^:~}"
             (normalize-time seconds minutes hours))))
-
-(declaim (ftype (function (integer &optional integer integer) int-list)
-                normalize-time))
 
 (defun normalize-time (seconds &optional (minutes 0) (hours 0))
   "Return (HOURS MINUTES SECONDS) in a normalized form (60s = 1m, 60m = 1h).

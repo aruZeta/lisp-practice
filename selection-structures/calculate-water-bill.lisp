@@ -12,9 +12,19 @@ Example: 15l = 10l of low price + 5l of medium price")
   (:export main))
 (in-package :lisp-practice/selection-structures/calculate-water-bill)
 
-(declaim (type (positive) *high-price*))
-(declaim (type (positive) *medium-price*))
-(declaim (type (positive) *low-price*))
+(declaim (type (positive)
+               *high-price*
+               *medium-price*
+               *low-price*
+               *high-limit*
+               *medium-limit*
+               *low-limit*)
+         (ftype (function (positive) positive)
+                calc-water-bill
+                calc-water-bill-high-limit)
+         (ftype (function (&optional positive) positive)
+                calc-water-bill-medium-limit
+                calc-water-bill-low-limit))
 
 (defvar *high-price* 10
   "PRICE of the LITERS above the `*high-limit*'.
@@ -25,10 +35,6 @@ PRICE is a POSITIVE.")
 (defvar *low-price* 1
   "PRICE of the LITERS between the `*low-limit*' and `*medium-limit*'.
 PRICE is a POSITIVE.")
-
-(declaim (type (positive) *high-limit*))
-(declaim (type (positive) *medium-limit*))
-(declaim (type (positive) *low-limit*))
 
 (defvar *high-limit* 20
   "LIMIT specifying the high-limit of water consumption.
@@ -52,8 +58,6 @@ LIMIT is a POSITIVE.")
             "You'll have to pay $~a~&"
             (calc-water-bill liters))))
 
-(declaim (ftype (function (positive) positive) calc-water-bill))
-
 (defun calc-water-bill (liters)
   "Return the total PRICE of LITERS.
 PRICE is a POSITIVE specifying the resulting price.
@@ -69,18 +73,12 @@ Uses `calc-water-bill-high-limit', `calc-water-bill-medium-limit' and
                                   (calc-water-bill-medium-limit liters)))
     (t (calc-water-bill-low-limit liters))))
 
-(declaim (ftype (function (positive) positive)
-                calc-water-bill-high-limit))
-
 (defun calc-water-bill-high-limit (liters)
   "Return PRICE of LITERS minus `*high-limit*'.
 PRICE is a POSITIVE specifying the resulting price.
 LITERS is a POSITIVE specifying an amount of liters."
   (* (- liters *high-limit*)
      *high-price*))
-
-(declaim (ftype (function (&optional positive) positive)
-                calc-water-bill-medium-limit))
 
 (defun calc-water-bill-medium-limit (&optional liters)
   "Return PRICE of `*high-limit*' minus `*medium-limit*'.
@@ -94,9 +92,6 @@ Eg: (being all the variables as default)
   (* (- (or liters *high-limit*)
         *medium-limit*)
      *medium-price*))
-
-(declaim (ftype (function (&optional positive) positive)
-                calc-water-bill-low-limit))
 
 (defun calc-water-bill-low-limit (&optional liters)
   "Return PRICE of `*medium-limit*' minus `*low-limit*'.

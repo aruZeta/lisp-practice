@@ -7,6 +7,9 @@
   (:export main))
 (in-package :lisp-practice/first-project/ex7)
 
+(declaim (ftype (function (number number number) boolean)
+                orderedp))
+
 (defun main ()
   "Main function of the program."
   (let ((a (get-number))
@@ -17,8 +20,6 @@
             (if (orderedp a b c)
                 ""
                 "n't"))))
-
-(declaim (ftype (function (number number number) boolean) orderedp))
 
 (defun orderedp (n1 n2 n3)
   "Return T if N1, N2 and N3 are in order. Otherwise, return NIL.

@@ -7,6 +7,9 @@
   (:export main))
 (in-package :lisp-practice/first-project/ex1)
 
+(declaim (ftype (function (integer &key (:legal-age integer)) boolean)
+                legal-age-p))
+
 (defun main ()
   "Main function of the progam."
   (let ((age (get-age)))
@@ -14,9 +17,6 @@
             "Age: ~a, of legal age: ~a~&"
             age
             (if (legal-age-p age) "yes" "no"))))
-
-(declaim (ftype (function (integer &key (:legal-age integer)) boolean)
-                legal-age-p))
 
 (defun legal-age-p (age &key (legal-age 18))
   "Return T if AGE is above or equal to LEGAL-AGE. Otherwise, return NIL.
