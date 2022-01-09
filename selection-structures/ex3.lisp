@@ -6,13 +6,13 @@ the letter associated to it.")
   (:import-from :lisp-practice/utils/types
                 #:char-list)
   (:import-from :lisp-practice/utils/get-input
-                #:get-integer)
+                #:get-positive)
   (:export main))
 (in-package :lisp-practice/selection-structures/ex3)
 
 (declaim (type (char-list)
                +dni-associated-letters+)
-         (ftype (function (integer) character)
+         (ftype (function (positive) character)
                 dni-letter))
 
 (defconstant +dni-associated-letters+ '(#\T #\R #\W #\A #\G #\M
@@ -23,13 +23,13 @@ the letter associated to it.")
 
 (defun main ()
   "Main function of the program."
-  (let ((dni (get-integer "Enter your DNI number: ")))
+  (let ((dni (get-positive "Enter your DNI number: ")))
     (format t
             "Letter: ~a"
             (dni-letter dni))))
 
 (defun dni-letter (dni)
   "Return CHARACTER representing the letter associated to DNI.
-DNI is a INTEGER."
+DNI is a POSITIVE."
   (nth (- dni (* (floor dni 23) 23))
        +dni-associated-letters+))
