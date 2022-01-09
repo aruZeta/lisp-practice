@@ -6,7 +6,7 @@ the letter associated to it.")
   (:import-from :lisp-practice/utils/types
                 #:char-list)
   (:import-from :lisp-practice/utils/get-input
-                #:get-dni)
+                #:get-integer)
   (:export main))
 (in-package :lisp-practice/selection-structures/ex3)
 
@@ -23,7 +23,7 @@ the letter associated to it.")
 
 (defun main ()
   "Main function of the program."
-  (let ((dni (get-dni)))
+  (let ((dni (get-integer "Enter your DNI number: ")))
     (format t
             "Letter: ~a"
             (dni-letter dni))))

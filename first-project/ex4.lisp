@@ -4,14 +4,14 @@
 would weigh in the moon.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
-                #:get-weight)
+                #:get-real)
   (:export main))
 (in-package :lisp-practice/first-project/ex4)
 
 (declaim (type (float)
                +earth-gravity+
                +moon-gravity+)
-         (ftype (function ((or float integer)) float)
+         (ftype (function (real) float)
                 weight-in-moon))
 
 (defconstant +earth-gravity+ 9.8
@@ -21,7 +21,7 @@ would weigh in the moon.")
 
 (defun main ()
   "Main function of the progam."
-  (let ((weight (get-weight)))
+  (let ((weight (get-real "Enter your weight: ")))
     (format t
             "In the moon you would weigh: ~a~&"
             (weight-in-moon weight))))

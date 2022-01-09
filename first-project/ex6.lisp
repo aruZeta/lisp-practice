@@ -4,15 +4,16 @@
 Example: $565 would be 1 $500 bill, 1 $50, 1 $10 and 1 $5.")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
-                #:int-list)
+                #:positive-list
+                #:positive)
   (:import-from :lisp-practice/utils/get-input
-                #:get-money)
+                #:get-positive)
   (:export main))
 (in-package :lisp-practice/first-project/ex6)
 
-(declaim (type (int-list)
+(declaim (type (positive-list)
                *bills*)
-         (ftype (function (integer))
+         (ftype (function (positive))
                 print-bills))
 
 (defvar *bills* '(500 200 100 50 20 10 5)
@@ -20,7 +21,7 @@ Example: $565 would be 1 $500 bill, 1 $50, 1 $10 and 1 $5.")
 
 (defun main ()
   "Main function of the program."
-  (let ((money (get-money)))
+  (let ((money (get-positive "Enter the money you want to convert: ")))
     (print-bills money)))
 
 (defun print-bills (money)

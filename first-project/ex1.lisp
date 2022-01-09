@@ -3,7 +3,7 @@
    "Program that asks the user his age and shows if it is a legal age.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
-                #:get-age)
+                #:get-integer)
   (:export main))
 (in-package :lisp-practice/first-project/ex1)
 
@@ -12,7 +12,7 @@
 
 (defun main ()
   "Main function of the progam."
-  (let ((age (get-age)))
+  (let ((age (get-integer "Enter your age: ")))
     (format t
             "Age: ~a, of legal age: ~a~&"
             age

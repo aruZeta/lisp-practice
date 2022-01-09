@@ -6,7 +6,7 @@ status and shows the complete name.")
   (:import-from :lisp-practice/utils/types
                 #:char-list-to-string-alist)
   (:import-from :lisp-practice/utils/get-input
-                #:get-marital-status-alias)
+                #:get-character)
   (:export main))
 (in-package :lisp-practice/selection-structures/marital-status)
 
@@ -27,7 +27,7 @@ MARITAL STATUS is a STRING with the full name of a marital status.")
 
 (defun main ()
   "Main function of the program."
-  (let ((alias (get-marital-status-alias)))
+  (let ((alias (get-character "Enter your marital status alias: ")))
     (format t
             "~a~&"
             (marital-status-from-alias alias))))

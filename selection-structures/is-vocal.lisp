@@ -20,7 +20,7 @@
 
 (defun main ()
   "Main function of the program."
-  (let ((character (get-character)))
+  (let ((character (get-character "Enter a character: ")))
     (format t
             "~a is~a a vocal"
             character

@@ -3,7 +3,7 @@
    "Program that asks the user for a number and shows it reversed.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
-                #:get-number)
+                #:get-integer)
   (:export main))
 (in-package :lisp-practice/first-project/ex9)
 
@@ -12,7 +12,7 @@
 
 (defun main ()
   "Main function of the program."
-  (let ((number (get-number)))
+  (let ((number (get-integer "Enter a integer: ")))
     (format t
             "~a reversed: ~a~&"
             number

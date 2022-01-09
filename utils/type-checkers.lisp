@@ -23,11 +23,23 @@ Otherwise, return NIL."
     (when (listp object)
       (every #'characterp object)))
 
+  (defun real-list-p (object)
+    "Return T if OBJECT is a LIST containing REAL.
+Otherwise, return NIL."
+    (when (listp object)
+      (every #'realp object)))
+
   (defun int-list-p (object)
     "Return T if OBJECT is a LIST containing INTEGER.
 Otherwise, return NIL."
     (when (listp object)
       (every #'integerp object)))
+
+  (defun positive-list-p (object)
+    "Return T if OBJECT is a LIST containing REAL.
+Otherwise, return NIL."
+    (when (listp object)
+      (every #'positivep object)))
 
   (defun char-list-to-string-alist-p (object)
     "Return T if OBJECT is a ALIST of CHARACTER LIST to STRING.

@@ -6,7 +6,7 @@ Example: 3 = \"Wednesday\"")
   (:import-from :lisp-practice/utils/types
                 #:string-list)
   (:import-from :lisp-practice/utils/get-input
-                #:get-number)
+                #:get-integer)
   (:export main))
 (in-package :lisp-practice/selection-structures/day-of-the-week)
 
@@ -28,7 +28,7 @@ DAY-OF-THE-WEEK is a STRING.")
 
 (defun main ()
   "Main function of the program."
-  (let ((number (get-number)))
+  (let ((number (get-integer "Enter the number of the day of the week: ")))
     (format t
             "It's ~a~&"
             (name-of-nth-day number))))

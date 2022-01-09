@@ -3,7 +3,7 @@
    "Program that asks the user a year and shows if it is leap year.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
-                #:get-year)
+                #:get-integer)
   (:export main))
 (in-package :lisp-practice/first-project/ex3)
 
@@ -12,7 +12,7 @@
 
 (defun main ()
   "Main function of the program."
-  (let ((year (get-year)))
+  (let ((year (get-integer "Enter a year: ")))
     (format t
             "The year ~a is~a a leap year~&"
             year

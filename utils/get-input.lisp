@@ -4,103 +4,86 @@
   (:use :cl)
   (:import-from :lisp-practice/utils/types
                 #:positive
-                #:date
-                #:day))
+                #:day
+                #:month
+                #:date))
 (in-package :lisp-practice/utils/get-input)
 
-(declaim (ftype (function () character)
-                get-character
-                get-marital-status-alias)
-         (ftype (function () integer)
-                get-age
-                get-dni
-                get-hours
-                get-minutes
-                get-money
-                get-number
-                get-seconds
-                get-year)
-         (ftype (function (&optional boolean boolean) (or date day))
-                get-date)
-         (ftype (function () (or float integer))
-                get-weight)
-         (ftype (function () positive)
-                get-liters))
+(declaim (ftype (function (string &rest list) character)
+                get-character)
+         (ftype (function (string &rest list) real)
+                get-real)
+         (ftype (function (string &rest list) integer)
+                get-integer)
+         (ftype (function (string &rest list) positive)
+                get-positive)
+         (ftype (function (string &rest list) day)
+                get-day)
+         (ftype (function (string &rest list) month)
+                get-month)
+         (ftype (function (string list string list &optional string list) date)
+                get-date))
 
-(defun get-liters ()
-  "Ask the user to enter LITERS and return its value.
-LITERS is a POSITIVE specifying an amount of liters."
-  (format t "Enter how much liters you've used this month: ")
-  (read))
-
-(defun get-number ()
-  "Ask the user to enter INTEGER and return its value."
-  (format t "Enter a number: ")
-  (read))
-
-(defun get-character ()
-  "Ask the user to enter CHARACTER and return its value."
-  (format t "Enter a character: ")
+(defun get-character (output &rest args)
+  "Ask the user to enter CHARACTER and return its value.
+OUTPUT is a STRING to show (via `format'), use it to ask the user for input.
+ARGS is a list of arguments to apply to the formatting of OUTPUT."
+  (apply #'format t output args)
   (read-char))
 
-(defun get-marital-status-alias ()
-  "Ask the user to enter ALIAS and return its value.
-ALIAS is a CHARACTER representing an alias of MARITAL STATUS in
-`*alias-to-marital-status-alist*'."
-  (format t "Enter the character representing your marital status (alias): ")
-  (read-char))
-
-(defun get-age ()
-  "Ask for the age of the user and return its value."
-  (format t "Enter your age: ")
+(defun get-real (output &rest args)
+  "Ask the user to enter REAL and return its value.
+OUTPUT is a STRING to show (via `format'), use it to ask the user for input.
+ARGS is a list of arguments to apply to the formatting of OUTPUT."
+  (apply #'format t output args)
   (read))
 
-(defun get-year ()
-  "Ask the user to enter a year and return its value."
-  (format t "Enter a year: ")
+(defun get-integer (output &rest args)
+  "Ask the user to enter INTEGER and return its value.
+OUTPUT is a STRING to show (via `format'), use it to ask the user for input.
+ARGS is a list of arguments to apply to the formatting of OUTPUT."
+  (apply #'format t output args)
   (read))
 
-(defun get-weight ()
-  "Ask the user to enter a weight and return its value."
-  (format t "Enter your weight: ")
+(defun get-positive (output &rest args)
+  "Ask the user to enter POSITIVE and return its value.
+OUTPUT is a STRING to show (via `format'), use it to ask the user for input.
+ARGS is a list of arguments to apply to the formatting of OUTPUT."
+  (apply #'format t output args)
   (read))
 
-(defun get-seconds ()
-  "Ask the user to enter seconds and return its value."
-  (format t "Enter the seconds you want to convert: ")
+(defun get-day (output &rest args)
+  "Ask the user to enter DAY and return its value.
+OUTPUT is a STRING to show (via `format'), use it to ask the user for input.
+ARGS is a list of arguments to apply to the formatting of OUTPUT."
+  (apply #'format t output args)
   (read))
 
-(defun get-minutes ()
-  "Ask the user to enter minutes and return its value."
-  (format t "Enter the minutes you want to convert: ")
+(defun get-month (output &rest args)
+  "Ask the user to enter MONTH and return its value.
+OUTPUT is a STRING to show (via `format'), use it to ask the user for input.
+ARGS is a list of arguments to apply to the formatting of OUTPUT."
+  (apply #'format t output args)
   (read))
 
-(defun get-hours ()
-  "Ask the user to enter hours and return its value."
-  (format t "Enter the hours you want to convert: ")
-  (read))
+(defun get-date (day-output day-args
+                 month-output month-args
+                 &optional year-output year-args)
+  "Ask the user to enter DATE and return its value.
+*-OUTPUT is a STRING to show (via `format'), use it to ask the user for input.
+*-ARGS is a list of arguments to apply to the formatting of OUTPUT.
+By default it will only get DAY and MONTH, optionally YEAR.
+If you want to get YEAR pass a 5th argument, `year-output' and optionally
+`year-args'.
+If you dont want to pass arguments to a specific output, pass NIL.
+DATE is a LIST like '(DAY MONTH YEAR), YEAR may not appear.
 
-(defun get-money ()
-  "Ask the user to enter money and return its value."
-  (format t "Enter the money you want to convert: ")
-  (read))
-
-(defun get-date (&optional monthp yearp)
-  "Ask the user to enter a date and return its value.
-By default it will only get a day.
-If MONTHP is non-nil it will ask for month too.
-If YEARP is non-nil it will ask for year too."
-  (format t "Enter a day: ")
-  (let ((date (read)))
-    (when monthp
-      (format t "Enter a month: ")
-      (setq date `(,date ,(read))))
-    (when yearp
-      (format t "Enter a year: ")
-      (setq date `(,(car date) ,(nth 1 date) ,(read))))
-    date))
-
-(defun get-dni ()
-  "Ask the user to enter his dni and return its value."
-  (format t "Enter your DNI: ")
-  (read))
+Example usage:
+(get-date \"Enter a day: \" nil \"Enter a month: \" nil).
+(get-date \"Day: \" nil \"Month: \" nil \"Year: \").
+(get-date \"Day of ~a's birthday: \" '(person) \"Month: \" nil)."
+  (let ((day (apply #'get-day day-output day-args))
+        (month (apply #'get-month month-output month-args)))
+    (if year-output
+        `(,day ,month ,(apply #'get-integer year-output year-args))
+        `(,day ,month))))

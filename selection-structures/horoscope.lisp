@@ -3,7 +3,9 @@
    "Program that asks the user a date and shows the associated zodiac sign.")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
-                #:int-to-string-alist)
+                #:int-to-string-alist
+                #:day
+                #:month)
   (:import-from :lisp-practice/utils/get-input
                 #:get-date)
   (:export main))
@@ -11,7 +13,7 @@
 
 (declaim (type (int-to-string-alist)
                +zodiac-signs+)
-         (ftype (function (integer integer) string)
+         (ftype (function (day month) string)
                 associated-zodiac-sign))
 
 (defconstant +zodiac-signs+ '((20 . "Aquarius")
@@ -34,7 +36,7 @@ there is no need to store the month too.")
 
 (defun main ()
   "Main function of the program."
-  (let ((date (get-date t)))
+  (let ((date (get-date "Enter a day: " nil "Enter a month: " nil)))
     (format t
             "The zodiac sign associated to that date is: ~a~&"
             (associated-zodiac-sign (car date) (nth 1 date)))))

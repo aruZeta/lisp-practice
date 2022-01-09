@@ -3,18 +3,18 @@
    "Program that asks the user for 3 numbers and shows if they are ordered.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
-                #:get-number)
+                #:get-real)
   (:export main))
 (in-package :lisp-practice/first-project/ex7)
 
-(declaim (ftype (function (number number number) boolean)
+(declaim (ftype (function (real real real) boolean)
                 orderedp))
 
 (defun main ()
   "Main function of the program."
-  (let ((a (get-number))
-        (b (get-number))
-        (c (get-number)))
+  (let ((a (get-real "Enter a number: "))
+        (b (get-real "Enter a number: "))
+        (c (get-real "Enter a number: ")))
     (format t
             "The numbers are~a ordered"
             (if (orderedp a b c)

@@ -3,16 +3,16 @@
    "Program that asks a number and shows its double.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
-                #:get-number)
+                #:get-real)
   (:export main))
 (in-package :lisp-practice/first-project/double)
 
-(declaim (ftype (function (integer) integer)
+(declaim (ftype (function (real) real)
                 double-n))
 
 (defun main ()
   "Main function of the progam."
-  (let ((number (get-number)))
+  (let ((number (get-real "Enter a number: ")))
     (format t
             "The double of ~a is: ~a~&"
             number

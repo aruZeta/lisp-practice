@@ -5,10 +5,13 @@
                 #:positivep
                 #:string-list-p
                 #:char-list-p
+                #:real-list-p
                 #:int-list-p
+                #:positive-list-p
                 #:char-list-to-string-alist-p
                 #:int-to-string-alist-p
                 #:dayp
+                #:monthp
                 #:datep)
   (:use :cl))
 (in-package :lisp-practice/utils/types)
@@ -25,9 +28,17 @@
   "Type for objects which must be a CHARACTER LIST."
   `(satisfies char-list-p))
 
+(deftype real-list ()
+  "Type for objects which must be a REAL LIST."
+  `(satisfies real-list-p))
+
 (deftype int-list ()
   "Type for objects which must be a INTEGER LIST."
   `(satisfies int-list-p))
+
+(deftype positive-list ()
+  "Type for objects which must be a POSITIVE LIST."
+  `(satisfies positive-list-p))
 
 (deftype char-list-to-string-alist ()
   "Type for objects which must be a ALIST of CHARACTER LIST to STRING."
@@ -38,9 +49,14 @@
   `(satisfies int-to-string-alist-p))
 
 (deftype day ()
-  "Type for object which must be a DAY.
+  "Type for objects which must be a DAY.
 A DAY is a INTEGER which is between 1 and 31 (inclusive)."
   `(satisfies dayp))
+
+(deftype month ()
+  "Type for objects which must be a MONTH.
+A MONTH is a INTEGER which is between 1 and 12."
+  `(satisfies monthp))
 
 (deftype date ()
   "Type for objects which must be a DATE.

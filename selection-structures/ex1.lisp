@@ -4,18 +4,18 @@
 triangle depending on the angles.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
-                #:get-number)
+                #:get-real)
   (:export main))
 (in-package :lisp-practice/selection-structures/ex1)
 
-(declaim (ftype (function (integer integer integer) string)
+(declaim (ftype (function (real real real) string)
                 triangle-type-angles))
 
 (defun main ()
   "Main function of the program"
-  (let ((side1 (get-number))
-        (side2 (get-number))
-        (side3 (get-number)))
+  (let ((side1 (get-real "Enter a the size of side 1: "))
+        (side2 (get-real "Enter a the size of side 2: "))
+        (side3 (get-real "Enter a the size of side 3: ")))
     (format t
             "The triangle is: ~a~&"
             (triangle-type-angles side1 side2 side3))))

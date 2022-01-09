@@ -8,7 +8,7 @@ Example: 15l = 10l of low price + 5l of medium price")
   (:import-from :lisp-practice/utils/types
                 #:positive)
   (:import-from :lisp-practice/utils/get-input
-                #:get-liters)
+                #:get-positive)
   (:export main))
 (in-package :lisp-practice/selection-structures/calculate-water-bill)
 
@@ -53,7 +53,7 @@ LIMIT is a POSITIVE.")
 
 (defun main ()
   "Main function of the program."
-  (let ((liters (get-liters)))
+  (let ((liters (get-positive "Enter how much liters you've used this month: ")))
     (format t
             "You'll have to pay $~a~&"
             (calc-water-bill liters))))

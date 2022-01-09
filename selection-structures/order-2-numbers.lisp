@@ -3,19 +3,19 @@
    "Program that asks the user 2 numbers and shows them ordered.")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
-                #:int-list)
+                #:real-list)
   (:import-from :lisp-practice/utils/get-input
-                #:get-number)
+                #:get-real)
   (:export main))
 (in-package :lisp-practice/selection-structures/order-2-numbers)
 
-(declaim (ftype (function (integer integer) int-list)
+(declaim (ftype (function (real real) real-list)
                 sort-2))
 
 (defun main ()
   "Main function of the program."
-  (let ((n1 (get-number))
-        (n2 (get-number)))
+  (let ((n1 (get-real "Enter a number: "))
+        (n2 (get-real "Enter a number: ")))
     (dolist (n (sort-2 n1 n2))
       (format t "~a " n))
     (format t "~&")))

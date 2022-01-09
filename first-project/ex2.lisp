@@ -3,7 +3,7 @@
    "Program that asks the user a number and shows if it is multiple of 7.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
-                #:get-number)
+                #:get-integer)
   (:export main))
 (in-package :lisp-practice/first-project/ex2)
 
@@ -12,7 +12,7 @@
 
 (defun main ()
   "Main function of the progam."
-  (let ((number (get-number)))
+  (let ((number (get-integer "Enter an integer: ")))
     (format t
             "~a is~a multiple of 7~&"
             number

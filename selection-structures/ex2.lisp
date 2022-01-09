@@ -7,9 +7,7 @@ Example: 2h80m100s => 3h21m40s")
   (:import-from :lisp-practice/utils/types
                 #:int-list)
   (:import-from :lisp-practice/utils/get-input
-                #:get-seconds
-                #:get-minutes
-                #:get-hours)
+                #:get-integer)
   (:export main))
 (in-package :lisp-practice/selection-structures/ex2)
 
@@ -18,9 +16,9 @@ Example: 2h80m100s => 3h21m40s")
 
 (defun main ()
   "Main function of the program."
-  (let ((hours (get-hours))
-        (minutes (get-minutes))
-        (seconds (get-seconds)))
+  (let ((hours (get-integer "Enter an amount of hours: "))
+        (minutes (get-integer "Enter an amount of minutes: "))
+        (seconds (get-integer "Enter an amount of seconds: ")))
     (format t
             "~{~a~^:~}"
             (normalize-time seconds minutes hours))))

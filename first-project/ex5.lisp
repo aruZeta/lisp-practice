@@ -4,7 +4,7 @@
 format hh:mm:ss and shows it.")
   (:use :cl)
   (:import-from :lisp-practice/utils/get-input
-                #:get-seconds)
+                #:get-integer)
   (:export main))
 (in-package :lisp-practice/first-project/ex5)
 
@@ -16,7 +16,7 @@ format hh:mm:ss and shows it.")
 
 (defun main ()
   "Main function of the program."
-  (let ((seconds (get-seconds)))
+  (let ((seconds (get-integer "Enter the seconds you want to convert: ")))
     (format t
             "~a:~a:~a~&"
             (seconds-to-hours seconds)
