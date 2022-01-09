@@ -23,6 +23,6 @@
 
 (defun orderedp (n1 n2 n3)
   "Return T if N1, N2 and N3 are in order. Otherwise, return NIL.
-N1, N2 and N3 are NUMBER."
+N1, N2 and N3 are REAL."
   (or (> n1 n2 n3)
       (< n1 n2 n3)))

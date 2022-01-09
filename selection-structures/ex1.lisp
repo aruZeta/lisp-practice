@@ -23,9 +23,9 @@ triangle depending on the angles.")
 (defun triangle-type-angles (side1 side2 side3)
   "Return TYPE depending on SIDE1, SIDE2 and SIDE3.
 TYPE is a STRING specifying the type of triangle depending on the angles.
-SIDE1 is a INTEGER specifying a side.
-SIDE2 is a INTEGER specifying a side.
-SIDE3 is a INTEGER specifying a side."
+SIDE1 is a REAL specifying the size a side.
+SIDE2 is a REAL specifying the size a side.
+SIDE3 is a REAL specifying the size a side."
   (let* ((sides (sort `(,side1 ,side2 ,side3) #'>))
        	 (a (car sides))
        	 (b (nth 1 sides))

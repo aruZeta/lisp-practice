@@ -20,5 +20,5 @@
 
 (defun double-n (n)
   "Return the double of N.
-N is a INTEGER."
+N is a REAL."
   (* n 2))

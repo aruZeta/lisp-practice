@@ -22,8 +22,8 @@
 
 (defun sort-2 (n1 n2)
   "Return LIST with N1 and N2 ordered from highest to lowest.
-N1 is a INTEGER.
-N2 is a INTEGER."
+N1 is a REAL.
+N2 is a REAL."
   (if (> n1 n2)
       `(,n1 ,n2)
       `(,n2 ,n1)))

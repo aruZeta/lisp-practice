@@ -15,9 +15,9 @@ would weigh in the moon.")
                 weight-in-moon))
 
 (defconstant +earth-gravity+ 9.8
-  "INT specifying the gravity of the Earth.")
+  "FLOAT specifying the gravity of the Earth.")
 (defconstant +moon-gravity+ 1.62
-  "INT specifying the gravity of the Moon.")
+  "FLOAT specifying the gravity of the Moon.")
 
 (defun main ()
   "Main function of the progam."
@@ -28,6 +28,6 @@ would weigh in the moon.")
 
 (defun weight-in-moon (weight)
   "Return how much WEIGHT would weigh in the moon.
-WEIGHT is a NUMBER."
+WEIGHT is a REAL."
   (* (/ weight +earth-gravity+)
      +moon-gravity+))

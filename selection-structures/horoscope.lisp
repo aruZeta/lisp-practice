@@ -44,8 +44,8 @@ there is no need to store the month too.")
 (defun associated-zodiac-sign (day month)
   "Return ZODIAC-SIGN associated to DAY and MONTH.
 ZODIAC-SIGN is a STRING.
-DAY is a INTEGER.
-MONTH is a INTEGER."
+DAY is a DAY.
+MONTH is a MONTH."
   (let* ((pos (1- month))
          (actual-sign (nth pos +zodiac-signs+)))
     (if (>= day (car actual-sign))

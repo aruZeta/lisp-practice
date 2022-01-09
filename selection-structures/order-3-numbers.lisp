@@ -23,9 +23,9 @@
 
 (defun sort-3 (n1 n2 n3)
   "Return LIST with N1, N2 and N3 ordered from highest to lowest.
-N1 is a INTEGER.
-N2 is a INTEGER.
-N3 is a INTEGER."
+N1 is a REAL.
+N2 is a REAL.
+N3 is a REAL."
   (when (> n2 n1)
     (let ((temp n1))
       (setq n1 n2

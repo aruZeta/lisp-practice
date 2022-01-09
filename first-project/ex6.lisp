@@ -17,7 +17,7 @@ Example: $565 would be 1 $500 bill, 1 $50, 1 $10 and 1 $5.")
                 print-bills))
 
 (defvar *bills* '(500 200 100 50 20 10 5)
-  "INTEGER LIST specifying the value of the available bills.")
+  "POSITIVE LIST specifying the value of the available bills.")
 
 (defun main ()
   "Main function of the program."
@@ -26,8 +26,8 @@ Example: $565 would be 1 $500 bill, 1 $50, 1 $10 and 1 $5.")
 
 (defun print-bills (money)
   "Shows how much of each BILL is necessary to reach MONEY.
-MONEY is a INTEGER.
-BILL is a INTEGER specifying a bill in `*bills*'."
+MONEY is a POSITIVE.
+BILL is a POSITIVE specifying a bill in `*bills*'."
   (loop for bill in *bills* do
     (format t
             "Bills of ~a: ~a~&"
