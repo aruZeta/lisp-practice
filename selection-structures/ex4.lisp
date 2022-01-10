@@ -3,6 +3,7 @@
    "Program that asks the user a number and the awarded number of a raffle, if
 the first or last digit is the same in both, show that the user has been awarded
 a refund.")
+  (:use :cl)
   (:import-from :lisp-practice/utils/types
                 #:positive)
   (:import-from :lisp-practice/utils/get-input
