@@ -12,7 +12,9 @@ equation, solves them and shows the solutions.")
 (in-package :lisp-practice/selection-structures/ex5)
 
 (declaim (ftype (function (real real real) (or real-list boolean))
-                solve-2nd-grade-equation))
+                solve-2nd-grade-equation)
+         (ftype (function (real real) real)
+                solve-solution))
 
 (defun main ()
   "Main function of the program."
