@@ -4,7 +4,8 @@
 the letter associated to it.")
   (:use :cl)
   (:import-from :lisp-practice/utils/types
-                #:char-list)
+                #:char-list
+                #:positive)
   (:import-from :lisp-practice/utils/get-input
                 #:get-positive)
   (:export main))
