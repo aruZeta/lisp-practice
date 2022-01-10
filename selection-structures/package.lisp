@@ -12,4 +12,5 @@
    :lisp-practice/selection-structures/odd-or-even
    :lisp-practice/selection-structures/ex1
    :lisp-practice/selection-structures/ex2
-   :lisp-practice/selection-structures/ex3))
+   :lisp-practice/selection-structures/ex3
+   :lisp-practice/selection-structures/ex4))
