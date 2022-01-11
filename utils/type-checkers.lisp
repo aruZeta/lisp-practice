@@ -85,7 +85,8 @@ If MONTH is passed, check `+days-of-the-months'.
 If YEAR is passed and it is a leap year, month 2 will have 1 day more."
     (when (integerp object)
       (and (> object 0)
-           (<= object (if month
+           (<= object (if (when month
+                            (monthp month))
                           (let ((days (nth (1- month) +days-of-months+)))
                             (if (when year
                                   (and (leap-year-p year)
