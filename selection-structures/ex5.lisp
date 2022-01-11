@@ -22,7 +22,7 @@ equation, solves them and shows the solutions.")
         (b (get-real "Value of bx: "))
         (c (get-real "Value of c: ")))
     (format t
-            "~:[No solutions~;~:*~{~#[~;x = ~a~;x1 = ~a~&x2 = ~a~]~}~]"
+            "~:[No solutions~;~:*~{~#[~;x = ~a~;x1 = ~a~&x2 = ~a~]~}~]~&"
             (solve-2nd-grade-equation a b c))))
 
 (defun solve-solution (nominator a)
