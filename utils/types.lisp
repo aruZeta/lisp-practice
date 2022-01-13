@@ -12,7 +12,8 @@
                 #:int-to-string-alist-p
                 #:dayp
                 #:monthp
-                #:datep)
+                #:datep
+                #:gradep)
   (:use :cl))
 (in-package :lisp-practice/utils/types)
 
@@ -63,3 +64,8 @@ A MONTH is a INTEGER which is between 1 and 12."
 A DATE is a LIST of (DAY MONTH YEAR), but not all are necessary, if there is
 only DAY then it wont be a LIST but a INTEGER."
   `(satisfies datep))
+
+(deftype grade ()
+  "Type for objects which must be a GRADE.
+A GRADE is a INTEGER which is between 0 and 10."
+  `(satisfies gradep))

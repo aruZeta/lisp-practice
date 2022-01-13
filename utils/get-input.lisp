@@ -6,7 +6,8 @@
                 #:positive
                 #:day
                 #:month
-                #:date))
+                #:date
+                #:grade))
 (in-package :lisp-practice/utils/get-input)
 
 (declaim (ftype (function (string &rest list) character)
@@ -22,7 +23,9 @@
          (ftype (function (string &rest list) month)
                 get-month)
          (ftype (function (string list string list &optional string list) date)
-                get-date))
+                get-date)
+         (ftype (function (string &rest list) grade)
+                get-grade))
 
 (defun get-character (output &rest args)
   "Ask the user to enter CHARACTER and return its value.
@@ -87,3 +90,10 @@ Example usage:
     (if year-output
         `(,day ,month ,(apply #'get-integer year-output year-args))
         `(,day ,month))))
+
+(defun get-grade (output &rest args)
+  "Ask the user to enter GRADE and return its value.
+OUTPUT is a STRING to show (via `format'), use it to ask the user for input.
+ARGS is a list of arguments to apply to the formatting of OUTPUT."
+  (apply #'format t output args)
+  (read))

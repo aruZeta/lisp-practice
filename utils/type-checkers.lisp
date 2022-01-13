@@ -115,4 +115,12 @@ DATE is a LIST (DAY MONTH YEAR), YEAR may or may not appear."
                (integerp (nth 2 object)))
           (and (dayp (car object)
                      (nth 1 object))
-               (monthp (nth 1 object)))))))
+               (monthp (nth 1 object))))))
+
+  (defun gradep (object)
+    "Return T if OBJECT is a GRADE.
+Otherwise, return NIL.
+GRADE is a INTEGER between 0 and 10."
+    (when (realp object)
+      (and (>= object 0)
+           (<= object 10)))))
