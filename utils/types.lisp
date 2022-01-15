@@ -3,6 +3,7 @@
    "Collection of custom types.")
   (:import-from :lisp-practice/utils/type-checkers
                 #:positivep
+                #:integer-between-0-99-p
                 #:string-list-p
                 #:char-list-p
                 #:real-list-p
@@ -20,6 +21,10 @@
 (deftype positive ()
   "Type for objects which must be a positive NUMBER or 0."
   `(satisfies positivep))
+
+(deftype integer-between-0-99 ()
+  "Type for objects which must be a INTEGER between 0 and 99."
+  `(satisfies integer-between-0-99-p))
 
 (deftype string-list ()
   "Type for objects which must be a STRING LIST."

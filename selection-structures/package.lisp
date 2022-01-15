@@ -19,4 +19,5 @@
    :lisp-practice/selection-structures/ex7
    :lisp-practice/selection-structures/ex8
    :lisp-practice/selection-structures/ex9
-   :lisp-practice/selection-structures/ex10))
+   :lisp-practice/selection-structures/ex10
+   :lisp-practice/selection-structures/ex11))

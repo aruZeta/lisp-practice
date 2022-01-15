@@ -11,6 +11,13 @@ Otherwise, return NIL."
     (when (numberp object)
       (>= object 0)))
 
+  (defun integer-between-0-99-p (object)
+    "Return T if OBJECT is a INTEGER between 0 and 99.
+Otherwise, return NIL."
+    (when (integerp object)
+      (and (>= object 0)
+           (<= object 99))))
+
   (defun string-list-p (object)
     "Return T if OBJECT is a LIST containing STRING.
 Otherwise, return NIL."
